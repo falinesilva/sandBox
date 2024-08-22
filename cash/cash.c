@@ -1,5 +1,5 @@
-#include <stdio.h>
 #include <cs50.h>
+#include <stdio.h>
 
 int calculate_quarters(int cents);
 int calculate_dimes(int cents);
