@@ -15,7 +15,7 @@ int main(int argc, string argv[])
     // Get key and verify.
     if (!check_key (argc, argv[1]))
     {
-        printf("Error Usage: Single digit.");
+        printf("Usage: ./caesar key");
         return 1;
     }
 
@@ -37,7 +37,7 @@ string encipher (string plaintext, int secret)
     int n = strlen(plaintext);
     for (int i = 0; i < n; i++)
     {
-        // Check if the character alphabetical and apply formula.
+        // Encrypt alphabetical characters using the Caesar cipher formula.
        if (isalpha(plaintext[i]))
         {
             if (islower(plaintext[i]))
@@ -55,5 +55,13 @@ string encipher (string plaintext, int secret)
 
 bool check_key (int argc, string arg)
 {
-    return (argc == 2 && isdigit(arg[0]) && arg[1] == '\0');
+    // Verify key is a single argument.
+    if (argc != 2) return false;
+
+    // Verify key is a valid non-negative integer.
+    for (int i = 0; arg[i] != '\0'; i++)
+    {
+        if (!isdigit(arg[i])) return false;
+    }
+    return true;
 }
