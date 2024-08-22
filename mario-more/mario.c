@@ -1,5 +1,5 @@
-#include <stdio.h>
 #include "cs50.h"
+#include <stdio.h>
 
 void print_row(int space, int hash);
 
@@ -17,7 +17,6 @@ int main(void)
     {
         print_row(n - i, i);
     }
-
 }
 
 void print_row(int space, int hash)
