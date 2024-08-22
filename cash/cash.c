@@ -14,7 +14,7 @@ int main(void)
     {
         cents = get_int("Change owed: ");
     }
-    while(cents < 0);
+    while (cents < 0);
 
     int quarters = calculate_quarters(cents);
 
@@ -34,18 +34,16 @@ int main(void)
 
     cents = quarters + dimes + nickels + pennies;
     printf("%i", cents);
-
 }
 int calculate_quarters(int cents)
 {
     int quarters = 0;
-    while(cents >= 25)
+    while (cents >= 25)
     {
         quarters++;
         cents = cents - 25;
     }
     return quarters;
-
 }
 
 int calculate_dimes(int cents)
