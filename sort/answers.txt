@@ -1,10 +1,10 @@
 sort1 uses: TODO
 
-How do you know?: Takes 7.73s to sort reversed list; Takes 4.25s to sort sorted list.
+How do you know?: Takes 9.864s to sort reversed list; Takes 4.86s to sort sorted list.
 
 sort2 uses: TODO
 
-How do you know?: Takes 3.93s to sort reversed list; Takes 3.98s to sort sorted list.
+How do you know?: Takes 4.61s to sort reversed list; Takes 3.98s to sort sorted list.
 
 sort3 uses: TODO
 
