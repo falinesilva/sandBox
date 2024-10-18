@@ -8,3 +8,5 @@ def main():
     user_input = convert(user_input)
 
     print (user_input)
+
+main()
