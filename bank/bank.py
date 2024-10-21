@@ -2,9 +2,9 @@
 
 greeting = input ("Greeting: ")
 
-# Convert to all lower case
+# Convert to all lower case and removes spaces in front and back
 
-greeting = greeting.lower()
+greeting = greeting.lower().strip()
 
 # Print $100 if greeting does not start with h
 if greeting.startswith("h") == 0:
