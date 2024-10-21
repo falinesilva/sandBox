@@ -18,7 +18,7 @@ def convert(time):
     hours = float (hours)
     minutes = float (minutes) / 100
 
-    if minutes == 0 <= 30:
+    if minutes >= 0.25:
         minutes = 0.5
 
     time = (hours + minutes)
