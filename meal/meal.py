@@ -18,11 +18,6 @@ def convert(time):
     hours = float (hours)
     minutes = float (minutes)
 
-    if minutes <= 30:
-        minutes = 0.5
-    elif minutes >= 30:
-        minutes = 1.0
-
     time = (hours + minutes)
     return (time)
 
