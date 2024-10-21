@@ -1,7 +1,15 @@
-user_input = input ("m: ")
+# Ask user for mass
 
-user_input_converted = int (user_input)
+m = input ("m: ")
 
-user_input_math = pow(user_input_converted*300000000, 2)
+c = pow(300000000, 2)
 
-print (user_input_math)
+# Convert mass to integer
+
+m = int (m)
+
+# Apply formula
+e = (m*c)
+
+# Print result
+print ("E: ",e)
