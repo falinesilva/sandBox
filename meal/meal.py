@@ -2,7 +2,7 @@ def main():
 # Ask user what time it is
     time = input ("What time is it? ")
 
-    time_converted = float (convert(time), end="")
+    time_converted = (convert(time))
 
     if time_converted == 7 <= 8.0:
         print ("breakfast time")
