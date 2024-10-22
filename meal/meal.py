@@ -20,6 +20,8 @@ def convert(time):
     hours = float (hours)
     minutes = float (minutes) / 100
 
+    minutes = round(minutes * 2) /2
+
     time = (hours + minutes)
     return (time)
 
