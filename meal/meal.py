@@ -4,11 +4,11 @@ def main():
 
     time_converted = (convert(time))
 
-    if time_converted == 7 <= 8.0:
+    if 7.0 <= time_converted <= 8.0:
         print ("breakfast time")
-    if time_converted == 12.0 <= 13.0:
+    if 12.0 <= time_converted <= 13.0:
         print ("lunch time")
-    elif time_converted == 18.0 <= 20.0:
+    elif 18.0 <= time_converted <= 20.0:
         print ("dinner time")
 
 def convert(time):
