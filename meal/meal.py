@@ -20,9 +20,6 @@ def convert(time):
     hours = float (hours)
     minutes = float (minutes) / 100
 
-    if minutes > 0.00 < 0.51:
-        minutes = 0.50
-
     time = (hours + minutes)
     return (time)
 
