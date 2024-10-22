@@ -4,8 +4,6 @@ def main():
 
     time_converted = (convert(time))
 
-    print (time_converted)
-
     if time_converted == 7 <= 8.0:
         print ("breakfast time")
     if time_converted == 12.0 <= 13.0:
@@ -18,7 +16,7 @@ def convert(time):
     hours, minutes = time.split(":")
 
     hours = float (hours)
-    minutes = float (minutes) / 100
+    minutes = float (minutes) / 60
 
     time = (hours + minutes)
     return (time)
