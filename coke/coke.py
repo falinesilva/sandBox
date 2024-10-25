@@ -9,8 +9,6 @@ while paid < 50:
     if coin in [25, 10, 5]:
         paid += coin
         print ("Amount Due:",due - paid)
-
-if paid > 50:
-    change = paid - due
-
-print ("Change Due:",change)
+    if paid > 50:
+        change = paid - due
+        print ("Change Due:",change)
