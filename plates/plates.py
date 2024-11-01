@@ -36,16 +36,8 @@ def is_valid(s):
     if not s[0].isalpha() and s[1].isalpha():
         return False
 
-    # Check if first number is 0
-    if s[2] == "0":
-            return False
 
-    for c in s[:2]:
-        if c.isdigit() and s[4].salpha:
-            return False
-
-    else:
-        return True
+    return True
 
 
 main()
