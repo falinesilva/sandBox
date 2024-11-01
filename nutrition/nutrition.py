@@ -33,7 +33,7 @@ def main():
     if fruit not in sheet:
         return False
 
-# Validate input
+# Validate input.
     if is_valid(fruit):
         print ("Calories:",sheet[fruit])
 
