@@ -1,5 +1,4 @@
 def main():
-
     plate = input("Plate: ")
 
     if is_valid(plate):
@@ -9,42 +8,40 @@ def main():
 
 
 def is_valid(s):
-
-   # Check length
+    # Check length
     if len(s) > 6 or len(s) < 2:
+        print("Length wrong")
         return False
 
     # Check that all characters are alphanumeric
-    for i in s:
-        if not i.isalnum():
-            return False
+    if not s.isalnum():
+        print("Contains non-alphanumeric characters")
+        return False
 
     # Check if first two characters are alphabetical
-    if not s[0:1].isalpha():
+    if not s[:2].isalpha():
+        print("First two characters are not alphabetical")
         return False
 
-    # Check if first number is 0
-    if s[2] == "0":
+    # Check if the first digit (if any) is not '0'
+    for char in s:
+        if char.isdigit():
+            if char == "0":
+                print("First number is '0'")
+                return False
+            break
+
+    # Check if all numbers, if present, come at the end
+    has_seen_digit = False
+    for char in s:
+        if char.isdigit():
+            has_seen_digit = True
+        elif has_seen_digit:
+            # If we see a letter after seeing a digit, it's invalid
+            print("Numbers are not at the end")
             return False
 
-    for c in s[:2]:
-        if c.isdigit() and s[4].salpha:
-            return False
-
-    # Check if all numbers come at the end.
-    if s[-1].isalpha() and not s[-2].isalpha():
-        return False
-
-    if s[-3].isalpha() and s[-4].isdigit():
-         return False
-
-    x = len(s) // 2
-
-    if s[x].isdigit():
-        return False
-
-    else:
-        return True
+    return True
 
 
 main()
