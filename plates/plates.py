@@ -14,6 +14,10 @@ def is_valid(s):
     if len(s) > 6 or len(s) < 2:
         return False
 
+    # Check if first two characters are alphabetical
+    if not s[0].isalpha() and s[1].isalpha():
+        return False
+
     # Check numbers in plate
     for i, c in enumerate(s):
         if c.isdigit():
@@ -31,10 +35,6 @@ def is_valid(s):
     for i in s:
         if not i.isalnum():
             return False
-
-    # Check if first two characters are alphabetical
-    if not s[0].isalpha() and s[1].isalpha():
-        return False
 
     # Check if first number is 0
     if s[2] == "0":
