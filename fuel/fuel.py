@@ -7,7 +7,7 @@ def main():
             if y == 0:
                 raise ValueError("Denominator cannot be zero.")
             # Calculate the percentage
-            percentage = (x // y) * 100
+            percentage = (x / y) * 100
             # Display 'E' for empty (1% or less) and 'F' for full (99% or more)
             if percentage <= 1:
                 print("E")
