@@ -3,7 +3,7 @@ def main():
         try:
             fraction = input("Fraction: ")
             x, y = map(int, fraction.split('/'))
-            if y == 0:
+            if y == 0 or y < x:
                 raise ValueError("Denominator cannot be zero.")
             percentage = (x / y) * 100
             percentage = round(percentage)
