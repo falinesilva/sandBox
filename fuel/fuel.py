@@ -4,6 +4,8 @@ def main():
             fraction = input("Fraction: ")
             x, y = map(int, fraction.split('/'))
             # Check if y is zero to avoid division by zero
+            x = round(x)
+            y = round(y)
             if y == 0:
                 raise ValueError("Denominator cannot be zero.")
             # Calculate the percentage
@@ -17,9 +19,8 @@ def main():
                 print(f"{int(percentage)}%")
             break
         except ValueError:
-            # Handle invalid input or division by zero
-            print("Invalid input. Please enter a valid fraction (X/Y) where Y is not zero.")
+            pass
         except ZeroDivisionError:
-            print("Denominator cannot be zero.")
+            pass
 
 main()
