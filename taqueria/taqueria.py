@@ -16,17 +16,18 @@ def main():
     # Get order
     while True:
         try:
-            item = ""
-            item = str (input("Item: ")).strip()
+            item = input("Item: ").strip()
             if item == "control-d":
                 raise EOFError
             if item not in menu:
                 raise ValueError
-            if item in menu:
-                price = float(menu[item])
-                total += price
-                formatted_total = f"${total:.2f}"
-                print ("Total:",formatted_total,)
+
+
+            price = menu[item]
+            total += price
+            formatted_total = f"${total:.2f}"
+            print ("Total:",formatted_total,)
+
         except EOFError:
             exit()
         except ValueError:
