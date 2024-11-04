@@ -10,7 +10,7 @@ def main():
     "Super Burrito": 8.50,
     "Super Quesadilla": 9.50,
     "Taco": 3.00,
-    "Tortilla Salad": 8.00
+    "Tortilla Salad": 8.00,
     }
     total = float(0.00)
     # Get order
@@ -24,8 +24,8 @@ def main():
             if item in menu:
                 price = float(menu[item])
                 total += price
-                formatted_total = f"{total:.2f}"
-                print ("Total: $",formatted_total,)
+                formatted_total = f"${total:.2f}"
+                print ("Total:",formatted_total,)
         except EOFError:
             exit()
         except ValueError:
