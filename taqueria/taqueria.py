@@ -17,7 +17,7 @@ def main():
     while True:
         try:
             item = ""
-            item = str (input("Item: "))
+            item = str (input("Item: ")).strip()
             if item == "control-d":
                 raise EOFError
             if item not in menu:
