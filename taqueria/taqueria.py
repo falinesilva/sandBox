@@ -16,7 +16,7 @@ def main():
     # Get order
     while True:
         try:
-            item = input("Item: ").strip()
+            item = input("Item: ").strip().title()
             if item == "control-d":
                 raise EOFError
             if item not in menu:
