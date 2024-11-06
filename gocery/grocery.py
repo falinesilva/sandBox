@@ -1,6 +1,6 @@
 # Initiate grocery list dictionary
 
-grocery_list = []
+grocery_list = {}
 
 while True:
     try:
@@ -12,17 +12,17 @@ while True:
         if item == "CONTROL-D":
             raise EOFError
 
+        if item in grocery_list:
+            grocery_list[item] += 1
 
         # Add item to grocery list
-        if item not in grocery_list:
-            grocery_list.append(item)
+        else:
+            grocery_list[item] = 1
 
     except EOFError:
-        grocery_list = sorted(grocery_list) # Sort list
-
-        for index, item in enumerate(grocery_list, 1):
-            print(f"{index} {item}")
-        exit() # Exit after printing
+        for key in sorted(grocery_list.keys()):  # Sorting keys alphabetically
+            print(f"{grocery_list[key]} {key}")
+        exit()
 
     except ValueError:
         pass
