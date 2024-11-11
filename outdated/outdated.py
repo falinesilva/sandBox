@@ -29,7 +29,7 @@ while True:
             if day > 31:
                 raise TypeError
             year = slash_date[2]
-            print (year, str(month).zfill(2), str(day).zfill(2), sep ="-") # Print formatted date with padding
+            print (year, str(month).zfill(2), str(day).zfill(2), sep ="-").strip()
         elif "," in user_date: # Check for , in input
             comma_date = user_date.split()
             year = comma_date[2]
@@ -39,7 +39,7 @@ while True:
             month_numbered = str (months_list.index(comma_date[0]) + 1)
             if int (month_numbered) > 12:
                 raise TypeError
-            print (year, str (month_numbered).zfill(2), str (day).zfill(2), sep = "-")
+            print (year, str (month_numbered).zfill(2), str (day).zfill(2), sep = "-").strip()
         else:
             raise TypeError
     except TypeError:
