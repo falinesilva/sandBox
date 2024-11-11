@@ -29,7 +29,7 @@ while True:
             if day > 31:
                 raise TypeError
             year = slash_date[2]
-            print (year, str(month).zfill(2), str(day).zfill(2), sep ="-").strip()
+            print (year, str(month).zfill(2), str(day).zfill(2), sep ="-") # Print formatted date with padding
         elif "," in user_date: # Check for , in input
             comma_date = user_date.split()
             year = comma_date[2]
