@@ -20,7 +20,7 @@ months_list = [
 while True:
     try:
         user_date = ""
-        user_date = input("Date: ").strip('"')
+        user_date = input("Date: ").strip('"').strip()
         if "/" in user_date: # Check for / in input
             slash_date = user_date.split("/") # Split string to list
             month = int (slash_date[0])
