@@ -40,7 +40,7 @@ while True:
                 raise ValueError
             month = comma_date[0].strip(',')
             month = str (months_list.index(comma_date[0]) + 1)
-            if int (month) > 12:
+            if int (month) <1 or int (month) > 12:
                 raise ValueError
             print (year, str (month).zfill(2), str (day).zfill(2), sep = "-")
             exit()
