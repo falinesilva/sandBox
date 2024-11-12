@@ -20,7 +20,7 @@ months_list = [
 while True:
     try:
         user_date = ""
-        user_date = input("Date: ").strip('"')
+        user_date = input("Date: ").strip('"').strip()
         if "/" in user_date: # Check for / in input
             slash_date = user_date.split("/") # Split string to list
             month = int (slash_date[0])
@@ -31,6 +31,7 @@ while True:
                 raise TypeError
             year = slash_date[2]
             print (year, str(month).zfill(2), str(day).zfill(2), sep ="-") # Print formatted date with padding
+            exit()
         elif "," in user_date: # Check for , in input
             comma_date = user_date.split()
             year = comma_date[2]
@@ -42,6 +43,7 @@ while True:
             if int (month) > 12:
                 raise TypeError
             print (year, str (month).zfill(2), str (day).zfill(2), sep = "-")
+            exit()
         else:
             raise TypeError
     except TypeError:
