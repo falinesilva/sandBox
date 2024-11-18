@@ -2,10 +2,12 @@ import emoji
 
 # Ask user for a string in English
 
-plaintext = str(input("Input:"))
+a = input("Input: ").strip()
 
-emojized = emoji.emojize(plaintext)
+# Emojize input
+
+b = emoji.emojize(a, language = 'alias')
 
 # Print emojized version of the user input
 
-print (emojized)
+print (b)
