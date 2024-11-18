@@ -6,4 +6,4 @@ user_input = str(input("Input: "))
 
 # Print emojized version of the user input
 
-print (emoji.emojize(user_input))
+print (emoji.emojize('user_input'))
