@@ -2,7 +2,7 @@ import emoji
 
 # Ask user for a string in English
 
-plaintext = str(input("Input:"))
+plaintext = str(input("Input: "))
 
 emojized = emoji.emojize(plaintext)
 
