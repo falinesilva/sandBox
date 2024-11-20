@@ -32,4 +32,4 @@ else:
 a = str(input("Input: ")).strip()
 
 # Print string in desired font
-print((figlet.renderText(a)).strip())
+print((figlet.renderText(a)))
