@@ -1,4 +1,5 @@
-import random
+import random # For randomizing the level input
+import sys # For exiting when user guesses right
 
 # User provides a positive integer input
 while True:
@@ -16,7 +17,7 @@ if n > 1:
 elif n == 1:
     rand_n = 1
 
-# Prompt user to guess n
+# Prompt user to guess n and print result
 while True:
     try:
         answer = int(input("Guess: "))
@@ -27,6 +28,6 @@ while True:
         elif answer > rand_n:
             print("Too large!")
         else:
-            print("Just right!")
+            sys.exit("Just right!") # Exit after print
     except ValueError:
         pass
