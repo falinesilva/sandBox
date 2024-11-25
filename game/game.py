@@ -1,4 +1,5 @@
 import random
+import sys
 
 # User provides a positive integer input
 while True:
@@ -27,6 +28,6 @@ while True:
         elif answer > rand_n:
             print("Too large!")
         else:
-            print("Just right!")
+            sys.exit("Just right!")
     except ValueError:
         pass
