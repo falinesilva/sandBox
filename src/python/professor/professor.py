@@ -4,6 +4,11 @@ def main():
     level = get_level()
     print(level)
 
+problems = []
+
+for i in range(10):
+    y = generate_integer(level)
+    
 
 def get_level():
 
@@ -20,9 +25,15 @@ def get_level():
             print("ValueError")
             pass
 
-# def generate_integer(level):
+def generate_integer(level):
+    if level == 1:
+        n = random.randint(9)
+    elif level == 2:
+        n = random.randint(99)
+    else:
+        n = random.randint(999)
+    return n
     
     
-
 
 main()
