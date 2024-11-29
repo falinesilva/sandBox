@@ -53,6 +53,7 @@ def main():
                 if (
                     attempts > 2
                 ):  # If user enters invalid or wrong answer 3 times, continue to next
+                    print(answer)
                     break
                 pass
     print("Score:", score)
