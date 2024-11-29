@@ -33,9 +33,9 @@ def main():
         problems.append(new_item)
 
 # Ask user for answer to list of problems and track score
-    score = 0
+    score = 0 # Initialize score to 0
     for item in problems:
-        attempts = 0
+        attempts = 0 # Initialize attempts to zero for each problem
         while True:
             try:
                 response = int(input(f"{item} = ")) # Ask use for answer to problem
@@ -44,12 +44,10 @@ def main():
                     raise ValueError # If input is invalid or wrong, raise ValueError
                 else:
                     score += 1 # If answer is correct, add point to score and continue
-                    print("Score:",score)
                     break
             except ValueError:
                 print("EEE")
                 attempts += 1
-                print ("Attempts",attempts)
                 if attempts > 2: # If user enters invalid or wrong answer 3 times, continue to next
                     break
                 pass
