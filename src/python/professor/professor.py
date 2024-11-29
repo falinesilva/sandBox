@@ -21,7 +21,6 @@ def get_level():
                 return level
                 break
         except ValueError:
-            print("ValueError")
             pass
 
 def main():
@@ -33,24 +32,26 @@ def main():
         new_item = (f"{generate_integer(level)} + {generate_integer(level)}")
         problems.append(new_item)
 
-# Ask user for answer to list of problems
-
+# Ask user for answer to list of problems and track score
+    score = 0
     for item in problems:
+        attempts = 0
         while True:
             try:
-                response = int(input(f"{item} = "))
-                answer = eval(item)
-                if not response > 0:
-                    pass
-                elif response == answer:
-                    break
+                response = int(input(f"{item} = ")) # Ask use for answer to problem
+                answer = eval(item) # Evaluate answer
+                if not response > 0 or response != answer:
+                    raise ValueError # If input is invalid or wrong, raise ValueError
                 else:
-                    raise ValueError
+                    score += 1 # If answer is correct, add point to score and continue
+                    print("Score:",score)
+                    break
             except ValueError:
                 print("EEE")
+                attempts += 1
+                print ("Attempts",attempts)
+                if attempts > 2: # If user enters invalid or wrong answer 3 times, continue to next
+                    break
                 pass
-
-            
-        
-
+    print("Score:", score)
 main()
