@@ -5,9 +5,9 @@ def generate_integer(level):
     if level == 1:
         n = random.randint(1, 9)
     elif level == 2:
-        n = random.randint(1, 99)
+        n = random.randint(10, 99)
     else:
-        n = random.randint(1, 999)
+        n = random.randint(100, 999)
     return n
 
 
