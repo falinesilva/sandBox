@@ -16,7 +16,7 @@ def get_level():
     # Prompt user for a level 1, 2, or 3
     while True:
         try:
-            level = int(input("Level: "))
+            level = int(input("Level: ").strip())
             if level not in {1, 2, 3}:
                 raise ValueError
             else:
