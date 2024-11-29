@@ -3,11 +3,11 @@ import random
 
 def generate_integer(level):
     if level == 1:
-        n = random.randint(1, 9)
+        n = random.randint(0, 9)
     elif level == 2:
-        n = random.randint(1, 99)
+        n = random.randint(10, 99)
     else:
-        n = random.randint(1, 999)
+        n = random.randint(100, 999)
     return n
 
 
@@ -21,7 +21,6 @@ def get_level():
                 raise ValueError
             else:
                 return level
-                break
         except ValueError:
             pass
 
@@ -41,7 +40,7 @@ def main():
         attempts = 0  # Initialize attempts to zero for each problem
         while True:
             try:
-                response = int(input(f"{item} = "))  # Ask use for answer to problem
+                response = int(input(f"{item} = ").strip())  # Ask use for answer to problem
                 answer = eval(item)  # Evaluate answer
                 if not response > 0 or response != answer:
                     raise ValueError  # If input is invalid or wrong, raise ValueError
@@ -54,9 +53,11 @@ def main():
                 if (
                     attempts > 2
                 ):  # If user enters invalid or wrong answer 3 times, continue to next
+                    print(answer)
                     break
                 pass
     print("Score:", score)
 
 
-main()
+if __name__ == "__main__":
+    main()
