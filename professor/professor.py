@@ -58,4 +58,5 @@ def main():
     print("Score:", score)
 
 
-main()
+if __name__ == "__main__":
+    main()
