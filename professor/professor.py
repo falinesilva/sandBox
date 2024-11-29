@@ -21,7 +21,6 @@ def get_level():
                 raise ValueError
             else:
                 return level
-                break
         except ValueError:
             pass
 
