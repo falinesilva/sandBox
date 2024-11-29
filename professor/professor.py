@@ -16,7 +16,7 @@ def get_level():
     # Prompt user for a level 1, 2, or 3
     while True:
         try:
-            level = int(input("Level: ").strip())
+            level = int(input("Level: "))
             if level not in {1, 2, 3}:
                 raise ValueError
             else:
@@ -40,7 +40,7 @@ def main():
         attempts = 0  # Initialize attempts to zero for each problem
         while True:
             try:
-                response = int(input(f"{item} = "))  # Ask use for answer to problem
+                response = int(input(f"{item} = ").strip())  # Ask use for answer to problem
                 answer = eval(item)  # Evaluate answer
                 if not response > 0 or response != answer:
                     raise ValueError  # If input is invalid or wrong, raise ValueError
