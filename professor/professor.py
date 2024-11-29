@@ -3,7 +3,7 @@ import random
 
 def generate_integer(level):
     if level == 1:
-        n = random.randint(1, 9)
+        n = random.randint(0, 9)
     elif level == 2:
         n = random.randint(10, 99)
     else:
