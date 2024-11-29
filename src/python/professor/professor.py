@@ -1,5 +1,6 @@
 import random
 
+
 def generate_integer(level):
     if level == 1:
         n = random.randint(1, 9)
@@ -8,6 +9,7 @@ def generate_integer(level):
     else:
         n = random.randint(1, 999)
     return n
+
 
 def get_level():
 
@@ -23,33 +25,38 @@ def get_level():
         except ValueError:
             pass
 
+
 def main():
     level = get_level()
 
-# Generate list of problems
+    # Generate list of problems
     problems = []
     for i in range(10):
-        new_item = (f"{generate_integer(level)} + {generate_integer(level)}")
+        new_item = f"{generate_integer(level)} + {generate_integer(level)}"
         problems.append(new_item)
 
-# Ask user for answer to list of problems and track score
-    score = 0 # Initialize score to 0
+    # Ask user for answer to list of problems and track score
+    score = 0  # Initialize score to 0
     for item in problems:
-        attempts = 0 # Initialize attempts to zero for each problem
+        attempts = 0  # Initialize attempts to zero for each problem
         while True:
             try:
-                response = int(input(f"{item} = ")) # Ask use for answer to problem
-                answer = eval(item) # Evaluate answer
+                response = int(input(f"{item} = "))  # Ask use for answer to problem
+                answer = eval(item)  # Evaluate answer
                 if not response > 0 or response != answer:
-                    raise ValueError # If input is invalid or wrong, raise ValueError
+                    raise ValueError  # If input is invalid or wrong, raise ValueError
                 else:
-                    score += 1 # If answer is correct, add point to score and continue
+                    score += 1  # If answer is correct, add point to score and continue
                     break
             except ValueError:
                 print("EEE")
                 attempts += 1
-                if attempts > 2: # If user enters invalid or wrong answer 3 times, continue to next
+                if (
+                    attempts > 2
+                ):  # If user enters invalid or wrong answer 3 times, continue to next
                     break
                 pass
     print("Score:", score)
+
+
 main()
