@@ -23,5 +23,7 @@ response = requests.get('https://api.coindesk.com/v1/bpi/currentprice.json')
 
 # Outputs the current cost of Bitcoins in USD to four decimal places
 
-result = float(o["bpi"]["USD"]["rate"].replace(',', '')) * n
+o = response.json()
+usd = float(o["bpi"]["USD"]["rate"].replace(',', ''))
+result = (usd * n)
 print(f"${result:,.4f}")
