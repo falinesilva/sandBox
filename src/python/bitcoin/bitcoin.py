@@ -1,9 +1,12 @@
+import json
 import requests
 import sys
 
+# Ask the user for the number of Bitcoins they want to convert
+
 try:
-    coins = float(sys.argv[1])
-    print (coins)
+    n = float(sys.argv[1])
+    print (n)
 
 except IndexError:
     print("Missing command-line argument")
@@ -13,3 +16,16 @@ except ValueError:
     sys.exit
 except requests.RequestException:
     sys.exit
+
+# Request the current Bitcoin value in USD
+
+response = requests.get('https://api.coindesk.com/v1/bpi/currentprice.json')
+
+# Outputs the current cost of Bitcoins in USD to four decimal places
+
+result = float(o["bpi"]["USD"]["rate"].replace(',', '')) * n
+print(f"${result:,.4f}")
+
+
+
+
