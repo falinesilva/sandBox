@@ -1,6 +1,6 @@
 def main():
     # Get greeting from user
-    greeting = input("Greeting: ").lower().strip()
+    greeting = input("Greeting: ")
 
     # Get value of the greeing
     response = value(greeting)
@@ -10,7 +10,8 @@ def main():
 
 
 def value(greeting):
-
+    greeting = greeting.lower().strip()
+    
     # Return 0 if the greeting is 'hello'
     if greeting == ("hello"):
         return 0
