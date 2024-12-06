@@ -1,35 +1,32 @@
 def main():
     # Get input from the user
-    user_fraction = input("Fraction: ")
-    user_fraction_converted = convert(user_fraction)
-    gauge_result = 
-
-    # Print percentage
     while True:
         try:
-            fraction = input("Fraction: ")
-            x, y = map(int, fraction.split('/'))
-            if y == 0 or y < x:
-                raise ValueError("Denominator cannot be zero.")
-            percentage = (x / y) * 100
-            percentage = round(percentage)
-
-            if percentage <= 1:
-                print("E")
-            elif percentage >= 99:
-                print("F")
-            else:
-                print(f"{int(percentage)}%")
-            break
+            user_fraction = input("Fraction: ")
         except ValueError:
             pass
         except ZeroDivisionError:
             pass
+    user_fraction_converted = convert(user_fraction)
+    
+    gauge_result = gauge(user_fraction_converted)
+
+    # Print percentage
+    if percentage <= 1:
+        print("E")
+    elif percentage >= 99:
+        print("F")
+    else:
+        print(f"{int(percentage)}%")
 def convert(fraction):
 # Convery to fraction
-
+    x, y = map(int, fraction.split('/'))
+    if y == 0 or y < x:
+        raise ValueError("Denominator cannot be zero.")
 def gauge(percentage):
-# Process percentage
+    # Process percentage
+    percentage = (x / y) * 100
+    percentage = round(percentage)
 
 
 if __name__== "__main__":
