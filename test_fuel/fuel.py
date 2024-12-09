@@ -27,7 +27,7 @@ def convert(fraction):
         return percentage
     except ValueError:
         print("ValueError")
-        raise ValueError
+    raise ValueError
     except ZeroDivisionError:
         print("ZeroDivisionError")
         raise ZeroDivisionError
