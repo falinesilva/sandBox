@@ -17,7 +17,7 @@ def convert(fraction):
         x, y = map(int, fraction.split('/', maxsplit=1))
         if y ==0:
             raise ZeroDivisionError
-        elif x > y:
+        elif x > y or x > 100 or y < 0:
             raise ValueError
         else:
             percentage = int( (x / y) * 100)
