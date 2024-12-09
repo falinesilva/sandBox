@@ -17,11 +17,9 @@ def test_convert():
     with pytest.raises(ValueError):
           convert("-")
     with pytest.raises(ValueError):
-        convert("-1/-1")
+          convert("-1/-1")
     with pytest.raises(ValueError):
           convert("2.5/3.5")
-    with pytest.raises(ValueError):
-          convert("100/0")
 
 def test_convert_zer0():
       with pytest.raises(ZeroDivisionError):
