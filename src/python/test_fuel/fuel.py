@@ -14,12 +14,14 @@ def main():
 
 def convert(fraction):
     try:
-        x, y = map(int, fraction.split('/', maxsplit=1))
-        if y ==0:
-            raise ZeroDivisionError
-        elif x > y:
+        if '/' not in fraction:
             raise ValueError
-        else: 
+        x, y = map(int, fraction.split('/', maxsplit=1))
+        if not y > 0:
+            raise ZeroDivisionError
+        elif  x < 0 or x > y:
+            raise ValueError
+        else:
             percentage = int( (x / y) * 100)
             percentage = round(percentage)
         return percentage
