@@ -2,6 +2,8 @@ from fuel import convert, gauge
 import pytest
 
 def test_convert():
+    assert convert("50/100") == 50
+    assert convert("99/100") == 99
     with pytest.raises(ValueError):
           convert("cat")
           convert("101/100")
