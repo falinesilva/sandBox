@@ -6,15 +6,23 @@ def test_convert():
     assert convert("99/100") == 99
     with pytest.raises(ValueError):
           convert("cat")
+    with pytest.raises(ValueError):
           convert("101/100")
+    with pytest.raises(ValueError):
           convert("2/1")
+    with pytest.raises(ValueError):
           convert("cat/dog")
+    with pytest.raises(ValueError):
           convert("600/1")
+    with pytest.raises(ValueError):
           convert("-")
+    with pytest.raises(ValueError):
           convert("-1/-1")
+    with pytest.raises(ValueError):
           convert("2.5/3.5")
     with pytest.raises(ZeroDivisionError):
           convert("1/0")
+    with pytest.raises(ValueError):
           convert("100/0")
 def test_gauge():
      assert gauge(-1) == "E"
