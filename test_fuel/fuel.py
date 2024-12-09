@@ -14,6 +14,8 @@ def main():
 
 def convert(fraction):
     try:
+        if '/' not in fraction:
+            raise ValueError
         x, y = map(int, fraction.split('/', maxsplit=1))
         if y ==0:
             raise ZeroDivisionError
