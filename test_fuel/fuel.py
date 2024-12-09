@@ -17,7 +17,7 @@ def convert(fraction):
         if '/' not in fraction:
             raise ValueError
         x, y = map(int, fraction.split('/', maxsplit=1))
-        if y == 0 or y < 0:
+        if not y > 0:
             raise ZeroDivisionError
         elif  x < 0 or x > y:
             raise ValueError
