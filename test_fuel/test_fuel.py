@@ -20,10 +20,13 @@ def test_convert():
           convert("-1/-1")
     with pytest.raises(ValueError):
           convert("2.5/3.5")
-    with pytest.raises(ZeroDivisionError):
-          convert("1/0")
     with pytest.raises(ValueError):
           convert("100/0")
+
+def test_convert_zer0():
+      with pytest.raises(ZeroDivisionError):
+          convert("1/0")
+
 def test_gauge():
      assert gauge(-1) == "E"
      assert gauge(1) == "E"
