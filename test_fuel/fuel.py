@@ -24,8 +24,10 @@ def convert(fraction):
             percentage = round(percentage)
         return percentage
     except ValueError:
+        print("ValueError")
         raise ValueError
     except ZeroDivisionError:
+        print("ZeroDivisionError")
         raise ZeroDivisionError
 
 def gauge(percentage):
