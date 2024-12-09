@@ -5,6 +5,7 @@ def test_convert():
     with pytest.raises(ValueError):
           convert("cat")
           convert("101/100")
+          convert("2/1")
           convert("cat/dog")
           convert("600/1")
           convert("-")
