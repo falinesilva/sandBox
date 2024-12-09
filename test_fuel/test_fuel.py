@@ -6,6 +6,8 @@ def test_convert():
           convert("cat")
           convert("101/100")
           convert("cat/dog")
+          convert("600/1")
+          convert("-")
     with pytest.raises(ZeroDivisionError):
           convert("1/0")
           convert("100/0")
