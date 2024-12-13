@@ -10,15 +10,15 @@ def main():
 
     try:
         with open(user_file) as file:
-            fieldnames = ['Sicilian Pizza', 'Small', 'Large']
-            reader = csv.DictReader(file, fieldnames=fieldnames)
+            reader = csv.DictReader(file)
+            menu.append({header: header for header in reader.fieldnames})
             for row in reader:
-                menu.append({"Sicilian Pizza": row["Sicilian Pizza"], "Small": row["Small"], "Large": row["Large"]})
+                menu.append(row)
 
     except FileNotFoundError:
         sys.exit("File does not exist")
 
-    print(tabulate(menu, tablefmt='grid'))
+    print(tabulate(menu, headers='firstrow', tablefmt='grid'))
 
 def get_argument(command_line):
 
