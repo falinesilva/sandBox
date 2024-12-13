@@ -6,14 +6,19 @@ import csv
 def main():
     user_file = get_argument(sys.argv)
    
+    menu = []
+
     try:
-        with open(user_file) as csvfile:
-            reader = csv.reader(csvfile)
+        with open(user_file) as file:
+            fieldnames = ['Sicilian Pizza', 'Small', 'Large']
+            reader = csv.DictReader(file, fieldnames=fieldnames)
+            for row in reader:
+                menu.append({"Sicilian Pizza": row["Sicilian Pizza"], "Small": row["Small"], "Large": row["Large"]})
+
     except FileNotFoundError:
         sys.exit("File does not exist")
-
-        print(reader)
-
+    
+    print(tabulate(menu, tablefmt='grid'))
 
 def get_argument(command_line):
     
