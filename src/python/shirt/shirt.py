@@ -1,11 +1,16 @@
 import sys
 
-from PIL import Image
+from PIL import Image, ImageOps
 
 def main():
     try:
         a,b = get_argument(sys.argv)
         print(a,b)
+        with Image.open(b) as shirt:
+            size = shirt.size
+        print(size)
+        with Image.open(a) as img:
+            ImageOps.fit(img, size).save('input_fit.jpg')
     except FileNotFoundError:
         sys.exit('Input does not exist')
 
