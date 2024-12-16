@@ -2,15 +2,29 @@ import sys
 
 from PIL import Image
 
-def get_argument(argument):
-    if len(argument) > 3:
+def main():
+    try:
+        a,b = get_argument(sys.argv)
+        print(a,b)
+    except FileNotFoundError:
+        sys.exit('Input does not exist')
+
+def get_argument(input):
+    extensions = ('.jpg', '.png', '.jpeg')
+    if len(input) > 3:
         sys.exit("Too many command-line arguments")
-    elif len(argument) < 3:
+    elif len(input) < 3:
         sys.exit("Too few command-line arguments")
-    elif not sys.argv[2].endswith('.jpeg', '.jpg', '.png'):
+    elif not input[2].endswith(extensions):
         sys.exit("Invalid output")
-    elif #Check if input and output have the same extension at the end
+    for ext in extensions:
+        if input[1].endswith(ext) and not input[2].endswith(ext):
+            sys.exit('Input and output have different extensions')
     else:
-        a = argument[1]
-        b = argument[2]
+        a = input[1]
+        b = input[2]
         return a, b
+    
+
+if __name__ == "__main__":
+    main()
