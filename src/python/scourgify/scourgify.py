@@ -3,22 +3,29 @@ import csv
 
 def main():
 
-    original = []
+    after = []
     try:
         a,b = get_argument(sys.argv)
-        print(a,b)
         with open(a) as file:
             reader = csv.DictReader(file)
             for row in reader:
-                original.append(row)
+                extracted = {}
+                last,first = ((row['name'].split(',')))
+                house = row['house']
+                extracted['first'] = first
+                extracted['last'] = last
+                extracted ['house'] = house
+                after.append(extracted)
+            print(after)
+            
+
+            
+
+
     except FileNotFoundError:
         sys.exit(f'Could not read {a}')
 
-    print(original[1])
-
 def get_argument(argument):
-    print(argument)
-    print(len(argument))
     if len(argument) > 3:
         sys.exit("Too many command-line arguments")
     elif len(argument) < 3:
