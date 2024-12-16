@@ -11,7 +11,7 @@ def main():
             reader = csv.DictReader(file)
             for row in reader:
                 last, first = row["name"].split(",")
-                after.append({"first": first, "last": last, "house": row["house"]})
+                after.append({"first": first.strip(), "last": last, "house": row["house"]})
     except FileNotFoundError:
         sys.exit(f"Could not read {a}")
 
