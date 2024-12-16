@@ -1,16 +1,18 @@
 import sys
 
-from PIL import Image, ImageOps
+from PIL import ImageOps
+from PIL import Image
 
 def main():
     try:
-        a,b = get_argument(sys.argv)
+        a, b = get_argument(sys.argv)
         print(a,b)
-        with Image.open(b) as shirt:
-            size = shirt.size
-        print(size)
-        with Image.open(a) as img:
-            ImageOps.fit(img, size).save('input_fit.jpg')
+            
+        with Image.open(a) as img, Image.open('shirt.png') as overlay:
+            size = overlay.size
+            resized = ImageOps.fit(img, size)
+            resized.paste(overlay, (0,0), overlay)
+            resized.save(b)
     except FileNotFoundError:
         sys.exit('Input does not exist')
 
