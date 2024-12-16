@@ -15,9 +15,6 @@ def main():
     except FileNotFoundError:
         sys.exit(f"Could not read {a}")
 
-    for item in after:
-        print(item)
-
     with open(b, 'w', newline = '') as after_file:
         fieldnames = ['first', 'last', 'house']
         writer = csv.DictWriter(after_file, fieldnames=fieldnames)
