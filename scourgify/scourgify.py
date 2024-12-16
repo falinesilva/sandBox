@@ -16,7 +16,7 @@ def main():
         sys.exit(f"Could not read {a}")
 
     with open(b, 'w', newline = '') as after_file:
-        fieldnames = ['first', 'last', 'house']
+        fieldnames = after[0]
         writer = csv.DictWriter(after_file, fieldnames=fieldnames)
 
         writer.writeheader()
