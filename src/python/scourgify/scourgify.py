@@ -18,6 +18,14 @@ def main():
     for item in after:
         print(item)
 
+    with open(b, 'w', newline = '') as after_file:
+        fieldnames = ['first', 'last', 'house']
+        writer = csv.DictWriter(after_file, fieldnames=fieldnames)
+
+        writer.writeheader()
+        for item in after:
+            writer.writerow(item)
+
 
 def get_argument(argument):
     if len(argument) > 3:
