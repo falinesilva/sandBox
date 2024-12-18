@@ -7,13 +7,16 @@ def main():
 
 
 def validate(ip):
-    result = re.search(r"^(([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-5][0-5])\.){3}[0-9]|[1-9][0-9]|1[0-9]{2}$",ip)
+    result = re.search(
+        r"^((25[0-5]|2[0-4][0-9]|1[0-9]{2}|[1-9][0-9]|[0-9])\.){3}(25[0-5]|2[0-4][0-9]|1[0-9]{2}|[1-9][0-9]|[0-9])$",
+        ip,
+    )
     if result:
-        print (result[1])
+        print(result[1])
     if result:
-        return('True')
+        return "True"
     else:
-        return('False')
+        return "False"
 
 
 if __name__ == "__main__":
