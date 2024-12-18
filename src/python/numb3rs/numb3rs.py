@@ -3,11 +3,11 @@ import sys
 
 
 def main():
-    print(validate(input("IPv4 Address: ")))
+    print(validate(input("IPv4 Address: ").strip()))
 
 
 def validate(ip):
-    result = re.search(r"^([0-9]+[10-99]*[100-255]*\.){3}[0-9]+[10-99]*[100-255]*$",ip)
+    result = re.search(r"^(([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-5][0-5])\.){3}[0-9]|[1-9][0-9]|1[0-9]{2}$",ip)
     if result:
         print (result[1])
     if result:

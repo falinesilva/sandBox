@@ -1,5 +1,9 @@
 from numb3rs import validate
 
-validate_test1():
+def test_validate_true():
+    assert validate('1.2.3.4') == 'True'
+    assert validate('255.255.255.255') == 'True'
 
-validate_test2():
+def test_validate_false():
+    assert validate('cat') == 'False'
+    assert validate('256.255.255.255') == 'False'
