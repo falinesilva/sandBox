@@ -12,3 +12,5 @@ def test_validate_false():
     assert validate('111.111.111.111111111') == False
     assert validate('512.512.512.512') == False
     assert validate('1.2.3.1000') == False
+    assert validate('1.256.1.1') ==  False
+    assert validate('256.1.1.1') == False
