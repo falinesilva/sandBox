@@ -12,11 +12,9 @@ def validate(ip):
         ip,
     )
     if result:
-        print(result[1])
-    if result:
-        return "True"
+        return True
     else:
-        return "False"
+        return False
 
 
 if __name__ == "__main__":
