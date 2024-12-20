@@ -7,12 +7,11 @@ def main():
 
 
 def parse(s):
-    html = re.search(r".*(src=\"http.*youtube.*title=).*", s)
+    html = re.search(r".*(\"http.*youtube.*title=).*", s)
     if html:
-        link = html[1]
-        link.replace('src="', '')
-        print(link)
-        return(link)
+        link = str(html[1])
+        updated_link = link.replace(' title=', '').replace('"', '')
+        return(updated_link)
     
 if __name__ == "__main__":
     main()
