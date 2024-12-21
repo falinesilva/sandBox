@@ -7,7 +7,7 @@ def main():
 
 
 def parse(s):
-    html = re.search(r"<iframe.*(http.*youtube\.com/embed/.{9}).*</iframe>$", s)
+    html = re.search(r"<iframe.*(http.*youtube\.com/embed/.*\").*</iframe>$", s)
     if html:
         link = str(html[1])
         updated_link = link.replace('"', '').replace('youtube.com/embed/', 'youtu.be/').replace('', '')
