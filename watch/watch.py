@@ -7,7 +7,7 @@ def main():
 
 
 def parse(s):
-    html = re.search(r".*\"(http.*youtube.*) title=.*", s)
+    html = re.search(r".*src=\"(http.*youtube.*) title=.*", s)
     if html:
         link = str(html[1])
         updated_link = link.replace('"', '').replace('youtube.com/embed/', 'youtu.be/').replace('', '')
