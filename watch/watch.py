@@ -13,6 +13,8 @@ def parse(s):
         updated_link = link.replace('"', '').replace('youtube.com/embed/', 'youtu.be/').replace('', '')
         if 'http:' in updated_link:
             updated_link = updated_link.replace('http:', 'https:')
+        if 'www.' in updated_link:
+            updated_link = updated_link.replace('www.', '')
         return(updated_link)
 
 if __name__ == "__main__":
