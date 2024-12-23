@@ -22,12 +22,12 @@ def convert(s):
         else:
             end_hours = f"{int(match[4]):02})"
         
-        if match[2] == ' ':
+        if not ':' in match[2]:
             start_minutes = (':00')
         else:
             start_minutes = match[2].strip()
 
-        if match[5] == ' ':
+        if not ':' in match[5]:
             finish_minutes = (':00')
         else:
             finish_minutes = match[5].strip()
