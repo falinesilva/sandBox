@@ -7,9 +7,11 @@ def main():
 
 
 def convert(s):
-    hours = re.search(r"^(\d).*(AM|PM)", s)
-    if hours:
-        return (f"{hours[1]} {hours[2]}")
+    match = re.search(r"^(\d)(.*|:\d\d)(AM|PM) to .*", s)
+    if match:
+        print(match[1]) # Start hours
+        print(match[2])# Start minutes
+        print(match[3]) # Start AM|PM
 
 
 if __name__ == "__main__":
