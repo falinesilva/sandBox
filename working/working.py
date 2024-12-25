@@ -13,13 +13,6 @@ def convert(s):
         if not match:
             raise ValueError
 
-        print(match[1])
-        print(match[2])
-        print(match[3])
-        print(match[4])
-        print(match[5])
-        print(match[6])
-
         if int(match[1]) > 12 or int(match[4]) > 12:
             raise ValueError
         if 'PM' in match[3]:
