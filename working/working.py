@@ -43,7 +43,7 @@ def convert(s):
         return hours
 
     except ValueError:
-        sys.exit
+        sys.exit('ValueError')
 
 if __name__ == "__main__":
     main()
