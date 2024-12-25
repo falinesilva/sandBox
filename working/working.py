@@ -1,6 +1,7 @@
 import re
 import sys
 
+
 def main():
     print(convert(input("Hours: ")))
 
@@ -42,7 +43,7 @@ def convert(s):
         return hours
 
     except ValueError:
-        return 'ValueError'
+        sys.exit
 
 if __name__ == "__main__":
     main()
