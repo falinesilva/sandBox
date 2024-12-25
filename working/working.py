@@ -13,12 +13,19 @@ def convert(s):
         if not match:
             raise ValueError
 
+        print(match[1])
+        print(match[2])
+        print(match[3])
+        print(match[4])
+        print(match[5])
+        print(match[6])
+
         if int(match[1]) > 12 or int(match[4]) > 12:
             raise ValueError
         if 'PM' in match[3]:
             start_hours = (int(match[1]) + 12)
-        elif 'AM' in match[3] and int(match[1]) == 12:
-            start_hours = f"{00:02}"
+        elif 'AM' in match[3] and int(match[1] == 12):
+            start_hours = 00
         else:
             start_hours = f"{int(match[1]):02}"
         if 'PM' in match [6]:
@@ -41,6 +48,7 @@ def convert(s):
 
         hours = (f"{start_hours}:{start_minutes} to {end_hours}:{finish_minutes}")
         return hours
+
 
     except ValueError:
         sys.exit('ValueError')
