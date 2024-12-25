@@ -24,6 +24,8 @@ def convert(s):
             raise ValueError
         if 'PM' in match[3]:
             start_hours = (int(match[1]) + 12)
+        elif 'AM' in match[3] and int(match[1] == 12):
+            start_hours = 00
         else:
             start_hours = f"{int(match[1]):02}"
         if 'PM' in match [6]:
