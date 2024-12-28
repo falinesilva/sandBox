@@ -12,6 +12,7 @@ def test_convert_b(): # AM/PM format tests
     assert convert('9:30 to 5:30') == 'ValueError'
     assert convert('9 AM - 5 PM') ==  'ValueError'
     assert convert('09:00 AM - 17:00') == 'ValueError'
+    assert convert('9 AM 5 PM') == 'ValueError'
     
     
 def test_convert_c(): # Hour and minute range tests

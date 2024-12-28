@@ -8,19 +8,23 @@ def main():
 
 def convert(s):
     try:
-        match = re.search(r"^(\d{1,2})(.*|:\d\d)(AM|PM) to (\d)(.*|:\d\d)(AM|PM)$", s)
+        match = re.search(r"^(\d{1,2})(.*|:\d\d)(AM|PM) to (\d{1,2})(.*|:\d\d)(AM|PM)$", s)
 
         # Check for match
         if not match:
             raise ValueError
-
+        else:
+            print(match[4])
+            print(match[6])
         # Check both hours
         if int(match[1]) > 12 or int(match[4]) > 12:
             raise ValueError
         
         # Check start time hours
-        if 'PM' in match[3]:
+        if 'PM' in match[3] and int(match[1]) < 12:
             start_hours = (int(match[1]) + 12)
+        elif 'PM' in match[3] and int(match[1]) == 12:
+            start_hours = 12
         elif 'AM' in match[3] and int(match[1]) == 12:
             start_hours = f"{00:02}"
         else:
@@ -33,8 +37,13 @@ def convert(s):
             start_minutes = match[2].strip().replace(':', '')
 
         # Check finish time hours
-        if 'PM' in match [6]:
+        print(match[4], match[6])
+        if 'PM' in match[6] and int(match[4]) < 12:
             finish_hours = (int(match[4]) + 12)
+        elif 'PM' in match[6] and int(match[4]) == 12:
+            finish_hours = 12
+        elif 'AM' in match[6] and int(match[4]) == 12:
+            finish_hours = f"{00:02}"
         else:
             finish_hours = f"{int(match[4]):02}"
         
