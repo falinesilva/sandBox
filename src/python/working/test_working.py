@@ -21,6 +21,6 @@ def test_convert_b(): # AM/PM format tests
 
 
 
-#def test_convert_c(): # Hour and minute range tests
+def test_convert_c(): # Hour and minute range tests
     #with pytest.raises(ValueError): convert('9:60 AM to 5:59 PM')
-    #with pytest.raises(ValueError): convert('13:00 PM to 13:00 AM')
+    with pytest.raises(ValueError): convert('13:00 PM to 13:00 AM')
