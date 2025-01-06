@@ -1,17 +1,13 @@
-import sys
-
 class Jar:
 
-    def __init__(self, size =0, capacity=12):
+    def __init__(self, size=0, capacity=12):
 
         self._capacity = capacity
         self._size = size
-        
 
     def __str__(self):
         n = self.size
-        return('🍪' * n)
-        
+        return "🍪" * n
 
     @property
     def capacity(self):
@@ -22,7 +18,7 @@ class Jar:
     @property
     def size(self):
         return self._size
-    
+
     def deposit(self, n):
         self._size += n
         if self._size > self._capacity:
@@ -30,15 +26,3 @@ class Jar:
 
     def withdraw(self, n):
         self._size -= n
-
-
-def main():
-    try:
-        jar = Jar(3, 10)
-        print(jar)
-
-    except ValueError:
-        sys.exit('ValueError')
-
-if __name__ == "__main__":
-    main()
