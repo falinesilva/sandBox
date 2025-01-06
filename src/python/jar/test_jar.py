@@ -6,7 +6,7 @@ def test_init():
     assert jar.size == 0
 
 def test_str():
-    jar = Jar(3, 10)
+    jar = Jar(10, 3)
     assert str(jar) == '🍪🍪🍪'
 
 def test_deposit():
@@ -15,6 +15,6 @@ def test_deposit():
     assert jar.size == 1
 
 def test_withdraw():
-    jar = Jar(2)
+    jar = Jar(capacity=2, size=1)
     jar.withdraw(1)
-    assert jar.size == 1
+    assert jar.size == 0

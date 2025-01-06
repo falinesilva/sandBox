@@ -1,6 +1,9 @@
 class Jar:
 
-    def __init__(self, size=0, capacity=12):
+    def __init__(self, capacity=12, size=0):
+
+        if capacity < 0:
+            raise ValueError
 
         self._capacity = capacity
         self._size = size
@@ -11,8 +14,6 @@ class Jar:
 
     @property
     def capacity(self):
-        if self._capacity < 0:
-            raise ValueError
         return self._capacity
 
     @property
@@ -25,4 +26,6 @@ class Jar:
             raise ValueError
 
     def withdraw(self, n):
+        if n > self.size:
+            raise ValueError
         self._size -= n
