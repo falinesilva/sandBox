@@ -3,15 +3,29 @@ import sys
 from datetime import date, datetime
 
 
-def main():
+def minutes(s):
     p = inflect.engine()
-    today = date.today()
-    birthday = date.fromisoformat(input("What's your birthday? ").replace('-', ''))
-    timedif = (today - birthday).days * 24 * 60
 
-    words = p.number_to_words(timedif).replace(' and ', ' ').replace('  ', ' ')
+    try:
+        birthday = date.fromisoformat(s.replace('-', ''))
 
-    print(f"{words.capitalize()} minutes")
+        today = date.today()
+
+        timedif = (today - birthday).days * 24 * 60
+
+        words = p.number_to_words(timedif).replace(' and ', ' ').replace('  ', ' ')
+
+        return f"{words.capitalize()} minutes"
+    
+    except ValueError:
+        sys.exit(1)
+    
+    except TypeError:
+        sys.exit(1)
+
+def main():
+
+    print (minutes(input("What's your birthday? ")))
 
 if __name__ == "__main__":
     main()
