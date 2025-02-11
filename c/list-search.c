@@ -4,12 +4,10 @@
 
 int main(void)
 {
-    // An array of strings
-    string strings[] = {"battleship", "boot", "cannon", "iron", "thimble", "top hat"};
+    string strings[] = {"battleship", "boot", "cannon", "iron", "thimble", "top hat"}; // Hard coded list
 
-    // Search for string
     string s = get_string("String: ");
-    for (int i = 0; i < 6; i++) //Magic number here
+    for (int i = 0; i < 6; i++) // Magic number here
     {
         if (strcmp(strings[i], s) == 0)
         {
