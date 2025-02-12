@@ -1,3 +1,5 @@
+// Calculate the approximate grade level of some text
+
 #include <ctype.h>
 #include <cs50.h>
 #include <stdio.h>
@@ -5,20 +7,15 @@
 #include <stdlib.h>
 #include <math.h>
 
-// Calculate grade level of user's text.
 int grade_calc (string text);
-// Constant for error message.
 int main(void)
 {
     int grade = 0;
 
-    // Ask user to input text.
-    string text = get_string("\nCalculate the approximate grade level of some text.\n\n**********************************************\nType text and press Enter: \n");
-    // Calculate grade level of the text.
+    string text = get_string("Type text and press Enter: ");
     grade = grade_calc(text);
     grade = round(grade);
 
-    // Print results.
     if (grade < 1)
     {
         printf("Before Grade 1.\n");
@@ -29,7 +26,7 @@ int main(void)
     }
     else
     {
-        printf("Grade %f\n", grade);
+        printf("Grade %.0f\n", (float)grade);
     }
 }
 
@@ -39,7 +36,6 @@ int grade_calc (string text)
     int words = 1;
     int sentences = 0;
 
-// Calculate the amount of letters, words and senteces in the text.
     for (int i = 0; i < strlen(text); i++)
     {
         if (isalpha(text[i]))
@@ -56,11 +52,9 @@ int grade_calc (string text)
         }
     }
 
-    //Calculate averages.
     float average_letters = (float)letters / words *100;
     float average_sentences = (float)sentences / words *100;
     
-    // Calculate grade based on Coleman-Liau index.
     float result = 0.0588 * average_letters - 0.296 * average_sentences - 15.8 + 0.5;
     return result;
 }
