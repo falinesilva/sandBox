@@ -1,3 +1,5 @@
+// Search a pre-constructed contact list
+
 #include <cs50.h>
 #include <stdio.h>
 #include <string.h>
@@ -13,16 +15,15 @@ int main(void)
 {
     person people[3];
 
-    people[0].name = "Carter";
-    people[0].number = "+1-617-495-1000";
+    people[0].name = "Jon";
+    people[0].number = "+1-555-123-1010";
 
-    people[1].name = "David";
-    people[1].number = "+1-617-495-1000";
+    people[1].name = "Jane";
+    people[1].number = "+1-555-456-0202";
 
-    people[2].name = "John";
-    people[2].number = "+1-949-468-2750";
+    people[2].name = "David";
+    people[2].number = "+1-555-789-0303";
 
-    // Search for name
     string name = get_string("Name: ");
     for (int i = 0; i < 3; i++)
     {
