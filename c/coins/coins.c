@@ -1,5 +1,7 @@
+// Calculate amount of coins needed for change
+
+#include <cs50.h>
 #include <stdio.h>
-#include "cs50.h"
 
 int calculate_quarters(int cents);
 int calculate_dimes(int cents);
@@ -33,7 +35,7 @@ int main(void)
     cents = cents - (pennies * 1);
 
     cents = quarters + dimes + nickels + pennies;
-    printf("%i", cents);
+    printf("%i", cents); //TODO: Print how many of each type of coin
 
 }
 int calculate_quarters(int cents)
