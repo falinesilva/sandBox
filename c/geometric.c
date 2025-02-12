@@ -1,3 +1,5 @@
+// Print a geometric sequence
+
 #include <stdio.h>
 #include <cs50.h>
 
