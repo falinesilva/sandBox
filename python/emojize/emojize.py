@@ -6,8 +6,8 @@ a = input("Input: ").strip()
 
 # Emojize input
 
-b = emoji.emojize(a, language="alias")
+b = emoji.emojize(a, language = 'alias')
 
 # Print emojized version of the user input
 
-print(b)
+print (b)

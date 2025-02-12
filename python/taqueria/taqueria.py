@@ -21,11 +21,13 @@ def main():
                 raise EOFError
             if item not in menu:
                 raise ValueError
+
+
             price = menu[item]
             total += price
             formatted_total = f"${total:.2f}"
             print ("Total:",formatted_total,)
-        
+
         except EOFError:
             exit()
         except ValueError:

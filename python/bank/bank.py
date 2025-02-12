@@ -1,4 +1,3 @@
-# TEST
 # Get greeting from user
 
 greeting = input ("Greeting: ")

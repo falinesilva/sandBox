@@ -1,5 +1,3 @@
-# Camel case converter
-
 # Ask user camel case
 name = input ("camelCase: ")
 

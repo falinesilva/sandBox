@@ -6,7 +6,7 @@ from pyfiglet import Figlet
 figlet = Figlet()
 
 # Initalize list of fonts
-fonts = list (figlet.getFonts())
+fonts = list(figlet.getFonts())
 
 # Checks usage
 length = len(sys.argv)

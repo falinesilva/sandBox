@@ -1,4 +1,5 @@
 def main():
+
 # Dict with fruits and their calorie levels
     sheet = {
         "apple": "130",
@@ -31,8 +32,8 @@ def main():
 # Is input in sheet
     if fruit not in sheet:
         return False
-    
-# Validate input
+
+# Validate input.
     if is_valid(fruit):
         print ("Calories:",sheet[fruit])
 

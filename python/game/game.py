@@ -1,5 +1,5 @@
-import random # For randomizing the level input
-import sys # For exiting when user guesses right
+import random
+import sys
 
 # User provides a positive integer input
 while True:
@@ -28,6 +28,6 @@ while True:
         elif answer > rand_n:
             print("Too large!")
         else:
-            sys.exit("Just right!") # Exit after print
+            sys.exit("Just right!")
     except ValueError:
         pass

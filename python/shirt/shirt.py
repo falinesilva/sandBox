@@ -7,7 +7,7 @@ def main():
     try:
         a, b = get_argument(sys.argv)
         print(a,b)
-            
+
         with Image.open(a) as img, Image.open('shirt.png') as overlay:
             size = overlay.size
             resized = ImageOps.fit(img, size)
@@ -31,7 +31,7 @@ def get_argument(input):
         a = input[1]
         b = input[2]
         return a, b
-    
+
 
 if __name__ == "__main__":
     main()
