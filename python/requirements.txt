@@ -2,3 +2,4 @@ pytest
 inflect
 requests
 emoji
+pyfiglet
