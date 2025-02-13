@@ -1,7 +1,8 @@
+"""Number guessing game"""
+
 import random
 import sys
 
-# User provides a positive integer input
 while True:
     try:
         n = int(input("Level: "))
@@ -10,14 +11,12 @@ while True:
     except ValueError:
         pass
 
-# Handle edge case when the user inputs 1
 if n > 1:
     rand_n = random.randrange(1, n)
     print(n)
 elif n == 1:
     rand_n = 1
 
-# Prompt user to guess n and print result
 while True:
     try:
         answer = int(input("Guess: "))
