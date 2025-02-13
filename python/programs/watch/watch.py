@@ -1,8 +1,11 @@
+# Extract youtube.com link from an embed block
+
 import re
 import sys
 
 
 def main():
+    print("Extract a 'youtube.com' link from 'iframe' block\n")
     print(parse(input("HTML: ")))
 
 
