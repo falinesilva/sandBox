@@ -1,4 +1,4 @@
-from working import convert
+from hours import convert
 
 def test_convert_a(): # Hour and minute conversion tests
     assert convert('9 AM to 5 PM') == '09:00 to 17:00'

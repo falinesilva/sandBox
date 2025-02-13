@@ -1,3 +1,5 @@
+# Convert range of hours from 12HR to 24HR
+
 import re
 import sys
 
@@ -9,9 +11,8 @@ def main():
 def convert(s):
     try:
         match = re.search(r"^(\d{1,2})(.*|:\d\d)(AM|PM) to (\d)(.*|:\d\d)(AM|PM)$", s)
-
         if not match:
-            raise ValueError
+            raise ValueError # TODO: Allow for space between number and AM/PM and allow lowercase am/pm
 
         if int(match[1]) > 12 or int(match[4]) > 12:
             raise ValueError
@@ -44,7 +45,7 @@ def convert(s):
 
 
     except ValueError:
-        sys.exit('ValueError')
+        sys.exit('Wrong format.')
 
 if __name__ == "__main__":
     main()
