@@ -1,11 +1,11 @@
-# Simplify your input
+# Remove the vowels from an input
 
 def main():
     word = input("Input: ")
-    output = shorten(word)
+    output = vowels(word)
     print("Output:", output)
 
-def shorten(word):
+def vowels(word):
     output = ""
     for char in word:
         if char.lower() not in "aeiou":

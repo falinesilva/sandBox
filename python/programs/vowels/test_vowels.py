@@ -1,7 +1,8 @@
-import twttr
-from twttr import shorten
 
-def test_shorten():
+import vowels
+from vowels import shorten
+
+def test_vowels():
     assert shorten("HELLO") == "HLL"
     assert shorten("hello") == "hll"
     assert shorten("Hi 123") == "H 123"
