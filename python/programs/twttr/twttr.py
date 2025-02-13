@@ -1,3 +1,5 @@
+# Simplify your input
+
 def main():
     word = input("Input: ")
     output = shorten(word)
