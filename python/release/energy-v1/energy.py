@@ -1,15 +1,11 @@
-# Ask user for mass
+""" Ask user for mass and output energy equivalence"""
 
 m = input ("m: ")
 
 c = pow(300000000, 2)
 
-# Convert mass to integer
-
 m = int (m)
 
-# Apply formula
 e = (m*c)
 
-# Print result
 print ("E: ",e)
