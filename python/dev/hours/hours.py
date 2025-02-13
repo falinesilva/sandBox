@@ -3,10 +3,10 @@
 import re
 import sys
 
+"""Convert 12HR range to 24HR format (e.g. 9AM to 5PM)"""
 
 def main():
-    print(convert(input("Hours: ")))
-
+    print(convert(input("Input Example: 9AM to 5PM\nHours: ")))
 
 def convert(s):
     try:
