@@ -2,23 +2,23 @@
 
 while True:
     try:
-        expression = input ("Math Expression: ")
+        expression = input("Math Expression: ")
 
         x, y, z = expression.split(" ")
 
-        x = float (x)
+        x = float(x)
 
-        z = float (z)
+        z = float(z)
 
         match (y):
             case "+":
-                print (float (x + z))
+                print(float(x + z))
             case "-":
-                print (float (x - z))
+                print(float(x - z))
             case "*":
-                print (float (x * z))
+                print(float(x * z))
             case "/":
-                print (float (x / z))
+                print(float(x / z))
     except ValueError:
         print("Invalid")
         pass
