@@ -10,7 +10,7 @@ def main():
 
 def is_valid(s):
 
-   # Check length
+    # Check length
     if len(s) > 6 or len(s) < 2:
         return False
 
