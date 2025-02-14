@@ -1,4 +1,4 @@
-from jar import Jar
+from cookies import Jar
 
 def test_init():
     jar = Jar()
