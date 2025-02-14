@@ -1,17 +1,24 @@
-expression = input ("Expression: ")
+"""Calculate a math expression"""
 
-x, y, z = expression.split(" ")
+while True:
+    try:
+        expression = input ("Math Expression: ")
 
-x = float (x)
+        x, y, z = expression.split(" ")
 
-z = float (z)
+        x = float (x)
 
-match (y):
-    case "+":
-        print (float (x + z))
-    case "-":
-        print (float (x - z))
-    case "*":
-        print (float (x * z))
-    case "/":
-        print (float (x / z))
+        z = float (z)
+
+        match (y):
+            case "+":
+                print (float (x + z))
+            case "-":
+                print (float (x - z))
+            case "*":
+                print (float (x * z))
+            case "/":
+                print (float (x / z))
+    except ValueError:
+        print("Invalid")
+        pass
