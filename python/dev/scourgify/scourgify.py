@@ -11,11 +11,13 @@ def main():
             reader = csv.DictReader(file)
             for row in reader:
                 last, first = row["name"].split(",")
-                after.append({"first": first.strip(), "last": last, "house": row["house"]})
+                after.append(
+                    {"first": first.strip(), "last": last, "house": row["house"]}
+                )
     except FileNotFoundError:
         sys.exit(f"Could not read {a}")
 
-    with open(b, 'w', newline = '') as after_file:
+    with open(b, "w", newline="") as after_file:
         fieldnames = after[0]
         writer = csv.DictWriter(after_file, fieldnames=fieldnames)
 
