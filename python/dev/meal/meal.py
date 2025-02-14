@@ -1,15 +1,11 @@
+"""Input the time and output meal time"""
+
 def main():
-# Ask user what time it is
+
     time = input ("What time is it? ")
 
-    time_converted = (convert(time))
+    print(convert(time))
 
-    if 7.0 <= time_converted <= 8.0:
-        print ("breakfast time")
-    if 12.0 <= time_converted <= 13.0:
-        print ("lunch time")
-    elif 18.0 <= time_converted <= 20.0:
-        print ("dinner time")
 
 def convert(time):
 
@@ -19,6 +15,14 @@ def convert(time):
     minutes = float (minutes) / 60
 
     time = (hours + minutes)
+    
+    if 7.0 <= time <= 8.0:
+        return ("breakfast time")
+    if 12.0 <= time <= 13.0:
+        return ("lunch time")
+    elif 18.0 <= time <= 20.0:
+        return ("dinner time")
+    
     return (time)
 
 if __name__ == "__main__":
