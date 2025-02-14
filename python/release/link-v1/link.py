@@ -1,4 +1,4 @@
-# Extract youtube.com link from an embed block
+"""Extract youtube.com link from an embed block"""
 
 import re
 import sys
