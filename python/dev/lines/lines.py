@@ -1,16 +1,6 @@
+"""See how many lines a python file has"""
+
 import sys
-
-def main():
-
-    user_file = get_argument(sys.argv)
-
-    try:
-        with open(user_file) as file:
-            lines = file.readlines()
-    except FileNotFoundError:
-        sys.exit("File does not exist")
-
-    print(filter(lines))
 
 def filter(lines):
     filtered_lines = []
@@ -33,6 +23,18 @@ def get_argument(command_line):
     else:
         a = command_line[1]
         return a
+
+def main(): # TODO: Abstract away and simplify main()
+
+    user_file = get_argument(sys.argv)
+
+    try:
+        with open(user_file) as file:
+            lines = file.readlines()
+    except FileNotFoundError:
+        sys.exit("File does not exist")
+
+    print(filter(lines))
 
 if __name__ == "__main__":
 	main()
