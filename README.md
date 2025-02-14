@@ -1,3 +1,3 @@
 # sandCastles
 
-A collection of school projects, practice programs, and experiments in code.
+A collection of practice, and experiments in code.
