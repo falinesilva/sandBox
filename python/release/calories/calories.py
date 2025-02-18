@@ -1,6 +1,7 @@
+"""Input a few item to see how many calories it has"""
+
 def main():
 
-    # Dict with fruits and their calorie levels
     sheet = {
         "apple": "130",
         "calories": "130",
@@ -25,22 +26,20 @@ def main():
         "watermelon": "80",
     }
 
-    # Get input and convert to lowercase to match dict
     fruit = input("Item: ")
     fruit = fruit.lower()
 
-    # Is input in sheet
     if fruit not in sheet:
+        print("Not in list")
         return False
 
-    # Validate input.
     if is_valid(fruit):
         print("Calories:", sheet[fruit])
 
 
 def is_valid(s):
     for c in s:
-        if c.isalpha() or c.isspace():  # Check if c is alphanumeric or a whitespace
+        if c.isalpha() or c.isspace():
             return True
     else:
         return False
