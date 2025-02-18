@@ -1,3 +1,5 @@
+"""Check if an IP address is valid"""
+
 import re
 import sys
 
