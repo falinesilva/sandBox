@@ -1,23 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Classic Japanese Cars</title>
+    <meta charset="utc-8">
+    <title>Car Reviews</title>
+    <link href=styles.css rel="stylesheet">
 </head>
 <body>
     <main>
-        <h1>Classic Japanese Cars</h1>
-        <p>The best JDM cars.</p>
-        <!-- List of cars -->
-    <section>
-        <h2>1. GT-R R34</h2>
-        <img src="images/gtr-r34_white.jpg" alt="Nissan GT-R R34">
-        <a href="https://en.wikipedia.org/wiki/Brian_O%27Conner" target="_blank">
-        </a>
-        <img src="images/gtr-r34_blue.jpg" alt="Nissan GT-R R34">
-        <p>More info on the GT-R R43 <a href="https://en.wikipedia.org/wiki/Nissan_GT-R" target="_blank">here</a>.</p>
-    </section>
+        <h1>Article (opinion):<br>The best JDM Car of all time</h1>
+        <section>
+            <!-- Publish Date -->
+            <p><em>Tuesday, February 19th 2025</em></p>
+        </section>
+
+        <section>
+            <!-- Article -->
+            <figure>
+                <h2>The Nissan Skyline R34 GT-R (1999-2002)</h2>
+                <img src="assets/images/Nissan_Skyline_R34_GT-R.jpg" alt="A blue Nissan Skyline R34 GT-R.">
+                <figcaption><em>The famous Nissan Skyline R34 GT-R.</em></figcaption>
+                <div class="wrap-text">
+                    <p>A true Japanese powerhouse, the R34 GT-R became a symbol of precision and power.
+                    Its aggressive design, futuristic digital dashboard, and insane tuning potential made it the king of street racing.
+                    When it hit the streets, it was unstoppable—a true icon in every sense.</p>
+                <h3>Specs:</h3>
+                <ul>
+                    <li>Cylinders: L6</li>
+                    <li>Horsepower: <strong>280 HP</strong></li>
+                    <li>Torque: 293 lb-ft @4400 RPM</li>
+                    <li>Fuel System: <strong>Turbocharged</strong> Multipoint Injection</li>
+                </ul>
+                More info on the <em>Nissan Skyline R34 GT-R</em> 
+                <a href="https://en.wikipedia.org/wiki/Nissan_GT-R" target="_blank">here</a>.
+            </figure>
+        </section>
+        <section>
+            <!--Rating Form-->
+            <h3>Leave a rating</h3>
+            <form action="ratings.html">
+                <fieldset>
+                    <legend>Do you agree or disagree?</legend>
+                    <label>
+                        <input id="agree" type="radio" name="agree" value="agree">Yes
+                        <input id="disagree" type="radio" name="disagree" value="disagree">No
+                    </label>
+                    <br><br>
+                    <legend>What did you think?</legend>
+                    <input name="rating" type="radio" name="rate" id="awesome" value="awesome">
+                    <label for="awesome">Awesome!</label>
+                    <input name="rating" type="radio" name="rate" id="not awesome" value="not awesome">
+                    <label for="not awesome">Not awesome.</label>
+                    <br><br>
+                    <button type="rate">Rate</button>
+                </fieldset>
+            </form>
+        </section>
+        </section>
+        <section>
+            <!--Subscribe Form-->
+            <h2>Subscribe!</h2>
+            <fieldset>
+            <form action="subscribe.html">
+                <input type="email" name="subscriber_email" placeholder="Enter your email" required>
+                <button type="submit">Submit</button>
+            </form>
+            </fieldset>
+        </section>
     </main>
+    <footer>No copyright - <a target="_blank" href="//github.com/r34-spec">github.com/r34-spec</a></footer>
 </body>
 </html>
