@@ -6,9 +6,11 @@ The exercises cover key topics like variables, control flow, data structures, al
 
 ## Tech Stack
 
-- Python
-- C
-- HTML
+Version Control: Git
+Backend: Python | C
+Frontend: Tkinter | HTML
+Deployment: Vercel
+Testing: pytest
 
 ## Acknowledgments
 
