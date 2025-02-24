@@ -1,3 +1,13 @@
+""" 
+WIP: This script is a work in progress. Functionality may change. 
+Converts a user-input date from MM/DD/YYYY or Month Day, Year format to YYYY-MM-DD.  
+"""
+
+# TODO: Add unit tests to validate date formatting.
+# Issue: An incomplete year (e.g. '199') is still being output without error as '199'.  
+# Expected: Ensure the year is formatted correctly (e.g., YYYY).  
+# Also, clarify the acceptable format to avoid confusion.
+
 # List of months
 
 months_list = [
@@ -21,8 +31,8 @@ while True:
     try:
         user_date = ""
         user_date = input("Date: ").strip('"').strip()
-        if "/" in user_date:  # Check for / in input
-            slash_date = user_date.split("/")  # Split string to list
+        if "/" in user_date:
+            slash_date = user_date.split("/")
             month = int(slash_date[0])
             if month > 12:
                 raise TypeError
@@ -30,11 +40,9 @@ while True:
             if day < 1 or day > 31:
                 raise TypeError
             year = slash_date[2]
-            print(
-                year, str(month).zfill(2), str(day).zfill(2), sep="-"
-            )  # Print formatted date with padding
+            print(year, str(month).zfill(2), str(day).zfill(2), sep="-")
             exit()
-        elif "," in user_date:  # Check for , in input
+        elif "," in user_date:
             comma_date = user_date.split()
             year = comma_date[2]
             day = int(
@@ -56,6 +64,9 @@ while True:
         else:
             raise TypeError
     except ValueError:
+
+        print("Usage: Format example: September 8th, 1636")
         exit()
     except TypeError:
+        print("Usage: Format example: September 8th, 1636")
         pass
