@@ -1,5 +1,14 @@
-# sandCastles
+## sandCastles  
 
-This repository contains exercises, projects, and notes that reflect my journey in computer science. It documents my learning process from basic syntax to more complex programming.
+A collection of exercises, projects, and notes from my exploration of computer science, focused on building full-stack apps.  
 
-The exercises cover key topics like variables, control flow, data structures, algorithms, and object-oriented programming, helping me build the skills I need for my goal of transitioning into full-stack web development. I hope to add more projects and notes to highlight practical applications as I continue to grow.
+As I learn, I’ll add more real-world projects and experiments with new languages to expand my skills.
+
+### Current Tech Stack:
+_Updated on Feb. 28th 2025_
+
+- C
+- Python
+- HTML
+- CSS
+- JavaScript
