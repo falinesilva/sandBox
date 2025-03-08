@@ -1,7 +1,18 @@
 * {
-  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  color: white;
+  max-width: 1200px;
+  margin: auto;
+  font-display: smooth;
 }
 
 body {
-    background-color: slategray;
+    background-color: black;
+
+}
+
+#banner {
+  text-align: left;
+  font-size: 40px;
+  
 }
