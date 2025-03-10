@@ -1,4 +1,4 @@
-## castle
+## Full Stack Exercises
 
 Excercises in code.
 
