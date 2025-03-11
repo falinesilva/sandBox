@@ -1,10 +1,10 @@
-## Full Stack Exercises
+## Learning Web Dev
 
-Excercises in code.
+This repository showcases my journey in learning frontend, backend, Python, and web development through hands-on projects. It includes practical applications of HTML, CSS, JavaScript, and Python, focusing on building both client-side and server-side solutions. Each project reflects my growth and proficiency in web development technologies.
+
+Note: This repository is a work in progress (WIP), with new projects and improvements added regularly.
 
 ### Tech Stack:
-_Updated on Feb. 28th 2025_
-
 - C
 - HTML
 - CSS
