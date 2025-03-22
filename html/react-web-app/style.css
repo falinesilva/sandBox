@@ -1,12 +1,23 @@
-h1 {
-  font-size: 42px;
-  text-transform: uppercase;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-p {
-  font-size: 20px;
-  line-height: 1.4px;
-  font-family: sans-serif;
+body {
+  font-family: "DM Sans", sans-serif;
+  background-color: #24305e;
+  color: #fafaf9;
+}
+
+.header {
+  margin: 40px;
+}
+
+h1 {
+  font-family: "DM Sans", sans-serif;
+  font-size: 42px;
+  text-transform: uppercase;
 }
 
 span {
@@ -16,4 +27,18 @@ span {
 
 ul {
   list-style: none;
+}
+
+.buddies {
+  font-size: 20px;
+  line-height: 1.4px;
+  background-color: #a8d0e6;
+}
+
+.scheme {
+  color: #f8e9a1;
+  color: #f76c6c;
+  color: #a8d0e6;
+  color: #374785;
+  color: #24305e;
 }
