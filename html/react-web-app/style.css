@@ -16,6 +16,7 @@ body {
   font-family: "Sono", monospace;
   background-color: #24305e;
   color: #fafaf9;
+  padding: 40px;
 }
 
 .header {
@@ -25,18 +26,26 @@ body {
 .form {
   margin: 5px;
   margin-bottom: 40px;
+  background-color: #374785;
+  padding: 16px 40px;
+  text-align: center;
 }
 
 .buddies {
   font-size: 20px;
   background-color: #374785;
   margin-bottom: 16px;
-  padding: 16px;
+  padding: 24px;
 }
 
 .btn {
   text-transform: none;
   background-color: #a8d0e6;
+  padding: 6px;
+}
+
+.group {
+  padding: 5px;
 }
 
 h1 {
