@@ -30,6 +30,11 @@ span {
   font-size: 14px;
 }
 
+.logo img {
+  height: 68;
+  width: 68;
+}
+
 /* MAIN LAYOUT */
 .container {
   max-width: 1200px;
