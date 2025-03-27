@@ -39,13 +39,14 @@
         <input type="text" placeholder="First Name" />
         <input type="text" placeholder="Last Name" />
         <input type="text" placeholder="Phone Number" />
+        <input type="text" placeholder="Email" />
         <select>
           <option value="">Choose group:</option>
           <option value="Family">Family</option>
           <option value="Friends">Friends</option>
           <option value="Colleagues">Coleagues</option>
         </select>
-        <button class="btn btn-large">Add</button>
+        <button class="btn">Add</button>
       </form>
 
       <main class="main">
@@ -53,16 +54,16 @@
         <aside>
           <ul>
             <li class="groups">
-              <button class="btn">All</button>
+              <button class="btn btn-all-groups">All</button>
             </li>
             <li class="groups">
-              <button class="btn">Family</button>
+              <button class="btn btn-group">Family</button>
             </li>
             <li class="groups">
-              <button class="btn">Friends</button>
+              <button class="btn btn-group">Friends</button>
             </li>
             <li class="groups">
-              <button class="btn">Colleagues</button>
+              <button class="btn btn-group">Colleagues</button>
             </li>
           </ul>
         </aside>
@@ -72,7 +73,10 @@
             <li class="buddies">
               <p>
                 Jane Smith <br />
-                555-123-4567
+                555-123-4567 <br />
+                <a class="email" href="jane.smith@mail.com"
+                  >jane.smith@mail.com</a
+                >
               </p>
               <span class="group">Family</span>
               <button class="btn">Edit</button>

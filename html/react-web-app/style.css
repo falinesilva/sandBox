@@ -10,6 +10,7 @@
   color: #a8d0e6;
   color: #374785;
   color: #24305e;
+  color: #a8a29e;
 }
 
 body {
@@ -59,11 +60,12 @@ span {
 .main {
   display: grid;
   grid-template-columns: 250px 1fr;
-  grid: 48px;
+  gap: 10px;
 }
 
 /* ELEMENTS */
 .buddies {
+  margin: 5px;
   font-size: 20px;
   background-color: #374785;
   margin-bottom: 16px;
@@ -85,8 +87,44 @@ span {
   margin: 5px 5px;
 }
 
+.email:link,
+.email:visited {
+  color: #f8e9a1;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.email:hover,
+.email:active {
+  color: #f76c6c;
+}
+
 .btn {
-  text-transform: none;
+  border: none;
+  font-family: "Concert One", sans-serif;
+  line-height: 1;
+  text-transform: uppercase;
+  font-size: 17px;
   background-color: #a8d0e6;
-  padding: 4px;
+  padding: 5px;
+  background-image: linear-gradient(135deg, #374785, #f76c6c);
+  color: inherit;
+}
+
+.btn-large {
+  font-size: 30px;
+  padding: 20px 32px 17px;
+}
+
+.btn-large {
+  margin-bottom: 16px;
+}
+
+.btn-all-groups {
+  margin-bottom: 16px;
+  width: 100%;
+}
+
+.btn-group {
+  width: 100%;
 }
