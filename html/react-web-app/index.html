@@ -32,7 +32,9 @@
           />
           <h1>Buddy System</h1>
         </div>
-        <button class="btn btn-large">Add a Buddy</button>
+        <button class="btn btn-square">
+          Login
+        </button>
       </header>
       <!--Add Buddy Form-->
       <form class="form">
@@ -46,7 +48,7 @@
           <option value="Friends">Friends</option>
           <option value="Colleagues">Coleagues</option>
         </select>
-        <button class="btn">Add</button>
+        <button class="btn btn-square style="background-color: ">Save</button>
       </form>
 
       <main class="main">
@@ -73,22 +75,22 @@
             </li>
           </ul>
         </aside>
-        <!--List of Buddies with Details-->
-        <section>
-          <ul>
-            <li class="buddies">
-              <p>
-                Jane Smith <br />
-                555-123-4567 <br />
-                <a class="email" href="jane.smith@mail.com"
-                  >jane.smith@mail.com</a
-                >
-              </p>
-              <span class="group">Family</span>
-              <button class="btn">Edit</button>
-            </li>
-          </ul>
-        </section>
+        <ul>
+          <button class="btn btn-square" style="transform: scale(150%)">
+            +
+          </button>
+          <li class="card">
+            <p>
+              Jane Smith <br />
+              555-123-4567 <br />
+              <a class="email" href="jane.smith@mail.com"
+                >jane.smith@mail.com</a
+              >
+            </p>
+            <span class="card_group">Family</span>
+            <button class="btn btn-square">Edit</button>
+          </li>
+        </ul>
       </main>
     </body>
   </div>
