@@ -59,6 +59,8 @@ span {
   padding: 16px 40px;
   text-align: center;
   border-radius: 10px;
+  border-radius: 10px;
+  color: #374151;
 }
 
 .main {
@@ -158,21 +160,10 @@ span {
 .form input,
 select {
   border: none;
+  border-radius: 10px;
+  margin: 5px;
   border-bottom: 1px solid black;
-  padding: 5px;
+  padding: 8px;
   font-size: 16px;
   outline: none;
-}
-
-.form input::placeholder,
-option {
-  color: #9ca3af;
-}
-
-.form select {
-  color: #fafaf9;
-}
-
-.form select::placeholder {
-  color: red;
 }
