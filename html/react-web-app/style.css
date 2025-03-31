@@ -5,12 +5,15 @@
 }
 
 .scheme {
+  color: #fafaf9;
   color: #f8e9a1;
   color: #f76c6c;
   color: #a8d0e6;
   color: #374785;
   color: #24305e;
-  color: #a8a29e;
+  color: #374151;
+  color: #6b7280;
+  color: #9ca3af;
 }
 
 body {
@@ -55,6 +58,7 @@ span {
   background-color: #374785;
   padding: 16px 40px;
   text-align: center;
+  border-radius: 10px;
 }
 
 .main {
@@ -86,10 +90,11 @@ span {
 }
 
 .card_group {
-  background-color: #f76c6c;
+  background-color: #f8e9a1;
+  color: #6b7280;
   margin: 5px 5px;
   border-radius: 100px;
-  padding: 5px;
+  padding: 10px;
 }
 
 .email:link,
@@ -118,8 +123,9 @@ span {
 }
 
 .btn:hover {
-  transform: scale(110%) rotate(-1deg);
-  transition: 0.3s;
+  transform: scale(120%) rotate(-1deg);
+  transition: 0.2s;
+  background-color: #374151;
 }
 
 .btn-large {
@@ -136,19 +142,37 @@ span {
   background-image: none;
 }
 
-.btn-square {
-  margin: 8px;
-  aspect-ratio: 1 / 1;
+.btn-special {
+  border-radius: 5px;
+  margin: 10px;
+  background-image: none;
   background-color: #f76c6c;
   width: auto;
-  border-radius: 8px;
-  background-image: none;
-  justify-content: center;
-  align-items: center;
-  display: flex;
 }
 
 .groups {
   margin-bottom: 8px;
   list-style-type: none;
+}
+
+.form input,
+select {
+  border: none;
+  border-bottom: 1px solid black;
+  padding: 5px;
+  font-size: 16px;
+  outline: none;
+}
+
+.form input::placeholder,
+option {
+  color: #9ca3af;
+}
+
+.form select {
+  color: #fafaf9;
+}
+
+.form select::placeholder {
+  color: red;
 }
