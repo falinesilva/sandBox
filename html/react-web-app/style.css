@@ -60,7 +60,6 @@ span {
   text-align: center;
   border-radius: 10px;
   border-radius: 10px;
-  color: #374151;
 }
 
 .main {
@@ -125,9 +124,9 @@ span {
 }
 
 .btn:hover {
-  transform: scale(120%) rotate(-1deg);
-  transition: 0.2s;
-  background-color: #374151;
+  transform: scale(110%) rotate(-1deg);
+  transition: 0.3s;
+  background-color: #ef4444;
 }
 
 .btn-large {
@@ -166,4 +165,8 @@ select {
   padding: 8px;
   font-size: 16px;
   outline: none;
+}
+
+.form input::first-child {
+  flex-grow: 1;
 }
