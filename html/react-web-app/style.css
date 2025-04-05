@@ -117,7 +117,7 @@ span {
   text-transform: uppercase;
   font-size: 17px;
   padding: 8px;
-  background-image: linear-gradient(135deg, #374785, #f76c6c);
+  background-image: linear-gradient(135deg, #a8d0e6, #374785, #f76c6c);
   color: inherit;
   border-radius: 100px; /* 100px works no matter how tall the button is */
   cursor: pointer;
@@ -126,7 +126,7 @@ span {
 .btn:hover {
   transform: scale(110%) rotate(-1deg);
   transition: 0.3s;
-  background-color: #ef4444;
+  text-shadow: 4px 0 #24305e;
 }
 
 .btn-large {
@@ -134,7 +134,7 @@ span {
 }
 
 .btn-all-groups {
-  margin-bottom: 16px;
+  margin-bottom: 8px;
   width: 100%;
 }
 
