@@ -77,22 +77,20 @@ span {
   padding: 24px;
   letter-spacing: 1px;
   border-radius: 16px;
-
+  justify-content: center;
   display: flex;
   align-items: center;
   gap: 24px;
 }
 
 .card li {
-  text-decoration: none;
+  list-style-type: none;
 }
 
 @media (max-width: 1200px) {
   .card {
-    flex-direction: column;
-    align-items: flex-end;
-
     gap: 12px;
+    flex-direction: column;
   }
 }
 
