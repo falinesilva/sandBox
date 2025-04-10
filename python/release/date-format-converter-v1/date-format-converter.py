@@ -25,8 +25,6 @@ months_list = [
     "December",
 ]
 
-# Prompt user for date in MM-DD-YYYY format or written out (i.e. September 8th, 1636)
-
 while True:
     try:
         user_date = ""

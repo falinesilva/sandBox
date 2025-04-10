@@ -1,3 +1,16 @@
+"""
+Reads a CSV file from the command line and displays it as a formatted table.
+
+Validates that exactly one .csv file is provided as an argument.
+Displays the table using the tabulate library with headers and grid formatting.
+
+Usage:
+    python script.py file.csv
+
+Exits with an error if the file is missing, invalid, or not a CSV.
+"""
+
+
 import tabulate
 from tabulate import tabulate
 import sys
