@@ -1,5 +1,5 @@
 import pytest
-from um import count
+from um_counter import count
 
 
 def test_count_a():

@@ -1,5 +1,9 @@
-import random
+"""
+Math quiz program that prompts the user for a difficulty level (1–3), 
+generates 10 random addition problems, and scores the user based on correct answers.
+"""
 
+import random
 
 def generate_integer(level):
     if level == 1:

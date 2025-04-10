@@ -1,6 +1,12 @@
+"""
+Converts a CSV of names from 'last, first' to separate fields.
+
+Usage:
+    python split_names_csv.py input.csv output.csv
+"""
+
 import sys
 import csv
-
 
 def main():
 

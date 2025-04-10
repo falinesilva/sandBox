@@ -1,4 +1,6 @@
-# Count the um's
+"""
+Counts how many times 'um' appears as a standalone word in user input.
+"""
 
 import re
 import sys

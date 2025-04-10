@@ -4,3 +4,4 @@ inflect
 requests
 emoji
 pyfiglet
+validators
