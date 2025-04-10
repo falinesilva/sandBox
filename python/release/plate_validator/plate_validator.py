@@ -1,3 +1,13 @@
+"""
+This script prompts the user to input a license plate and checks if it is valid
+based on Massachusetts laws:
+- Length must be between 2 and 6 characters.
+- The first two characters must be letters.
+- Numbers, if present, must not start with '0' and must appear only at the end.
+- Only alphanumeric characters are allowed.
+"""
+
+
 def main():
 
     plate = input("Plate: ")
