@@ -1,3 +1,10 @@
+"""
+Calculates the number of minutes since a given birthdate.
+
+Usage:
+    python minutes_since_birth.py
+"""
+
 import inflect
 import sys
 from datetime import date, datetime

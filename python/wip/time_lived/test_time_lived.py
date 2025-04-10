@@ -1,5 +1,5 @@
 import pytest
-from seasons import minutes
+from time_lived import minutes
 
 
 def test_minutes_a():
