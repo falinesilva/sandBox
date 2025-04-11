@@ -1,3 +1,9 @@
+"""
+Adds a shirt overlay to an image.
+
+Usage: python shirt_overlay.py input.jpg output.jpg
+"""
+
 import sys
 
 from PIL import ImageOps
