@@ -1,3 +1,10 @@
+"""
+Generates a personalized "shirtificate" PDF for a given name using the FPDF library.
+
+Prompts the user for their name, overlays the text "[Name] took CS50" onto a template image,
+and saves the result as 'shirtificate.pdf'.
+"""
+
 from fpdf import FPDF
 
 name = input("Name: ")
