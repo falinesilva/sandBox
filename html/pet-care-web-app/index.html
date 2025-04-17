@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Concert+One&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sono:wght@200..800&display=swap"
+      rel="stylesheet"
+    />
+    <link href="style.css" rel="stylesheet" />
+    <title>Buddy System</title>
+  </head>
+  <div class="container">
+    <body>
+      <!--Logo and Name-->
+      <header class="header">
+        <div class="logo">
+          <img
+            src="logo-icon.png"
+            height="68"
+            width="68"
+            alt="Buddy System Logo"
+          />
+          <h1>Pet Care Pro</h1>
+        </div>
+        <button class="btn btn-special">Login</button>
+      </header>
+      <!--Add Buddy Form-->
+      <form class="form">
+        <input type="text" placeholder="First Name" />
+        <input type="text" placeholder="Last Name" />
+        <input type="text" placeholder="Phone Number" />
+        <input type="text" placeholder="Email" />
+        <select>
+          <option value="">Group:</option>
+          <option value="Family">Family</option>
+          <option value="Friends">Friends</option>
+          <option value="Colleagues">Coleagues</option>
+        </select>
+        <button class="btn btn-special">Save</button>
+      </form>
+
+      <main class="main">
+        <!--Sidebar with Filter for Groups-->
+        <aside>
+          <ul>
+            <li class="groups">
+              <button class="btn btn-all-groups">All</button>
+            </li>
+            <li class="groups">
+              <button class="btn btn-group" style="background-color: #f76c6c">
+                Family
+              </button>
+            </li>
+            <li class="groups">
+              <button class="btn btn-group" style="background-color: #a8d0e6">
+                Friends
+              </button>
+            </li>
+            <li class="groups">
+              <button class="btn btn-group" style="background-color: #374785">
+                Colleagues
+              </button>
+            </li>
+          </ul>
+        </aside>
+        <ul>
+          <button class="btn btn-special">Create</button>
+
+          <li class="card">
+            <ul>
+              <li>Name: Jane Smith</li>
+              <li>Phone: 555-123-4567</li>
+              <li>
+                E-Mail
+                <a class="email" href="mailto:jane.smith@mail.com"
+                  >jane.smith@mail.com</a
+                >
+              </li>
+              <li>Family</li>
+              <li>
+                Lorem ipsum dolor sit amet, porro semper te vix. Et ius
+                inciderint disputationi comprehensam, vero assum eu vis. Porro
+                fabulas at mei. Ea est quem saepe, bonorum debitis est id. Ut
+                ius sonet nonumy intellegebat, in feugiat albucius invenire eos.
+                Usu et laoreet deserunt temporibus, brute dicunt euripidis no
+                his, et possit tincidunt liberavisse eum. Quo in dicat altera
+                officiis, ad nam consequuntur signiferumque. Id homero similique
+                has. Id posse summo maiorum eos. Nibh nostrum accommodare vim
+                ne.
+              </li>
+            </ul>
+            <button class="btn btn-special">Edit</button>
+          </li>
+        </ul>
+      </main>
+    </body>
+  </div>
+</html>
