@@ -17,19 +17,14 @@
       rel="stylesheet"
     />
     <link href="style.css" rel="stylesheet" />
-    <title>Buddy System</title>
+    <title>Pet Care Pro</title>
   </head>
   <div class="container">
     <body>
       <!--Logo and Name-->
       <header class="header">
         <div class="logo">
-          <img
-            src="logo-icon.png"
-            height="68"
-            width="68"
-            alt="Buddy System Logo"
-          />
+          <img src="logo-icon.png" height="68" width="68" alt="Pet Care Pro" />
           <h1>Pet Care Pro</h1>
         </div>
         <button class="btn btn-special">Login</button>
@@ -41,10 +36,11 @@
         <input type="text" placeholder="Phone Number" />
         <input type="text" placeholder="Email" />
         <select>
-          <option value="">Group:</option>
-          <option value="Family">Family</option>
-          <option value="Friends">Friends</option>
-          <option value="Colleagues">Coleagues</option>
+          <option value="">Species:</option>
+          <option value="Cat">Cat</option>
+          <option value="Dog">Dog</option>
+          <option value="Fish">Fish</option>
+          <option value="Bird">Bird</option>
         </select>
         <button class="btn btn-special">Save</button>
       </form>
@@ -54,52 +50,34 @@
         <aside>
           <ul>
             <li class="groups">
-              <button class="btn btn-all-groups">All</button>
+              <button class="btn btn-group">Pets</button>
             </li>
             <li class="groups">
-              <button class="btn btn-group" style="background-color: #f76c6c">
-                Family
-              </button>
+              <button class="btn btn-group">Appointments</button>
             </li>
             <li class="groups">
-              <button class="btn btn-group" style="background-color: #a8d0e6">
-                Friends
-              </button>
+              <button class="btn btn-group">Medications</button>
             </li>
             <li class="groups">
-              <button class="btn btn-group" style="background-color: #374785">
-                Colleagues
-              </button>
+              <button class="btn btn-group">Journal</button>
             </li>
           </ul>
         </aside>
         <ul>
-          <button class="btn btn-special">Create</button>
+          <button class="btn btn-special">Add New</button>
 
           <li class="card">
             <ul>
-              <li>Name: Jane Smith</li>
-              <li>Phone: 555-123-4567</li>
-              <li>
-                E-Mail
-                <a class="email" href="mailto:jane.smith@mail.com"
-                  >jane.smith@mail.com</a
-                >
-              </li>
-              <li>Family</li>
-              <li>
-                Lorem ipsum dolor sit amet, porro semper te vix. Et ius
-                inciderint disputationi comprehensam, vero assum eu vis. Porro
-                fabulas at mei. Ea est quem saepe, bonorum debitis est id. Ut
-                ius sonet nonumy intellegebat, in feugiat albucius invenire eos.
-                Usu et laoreet deserunt temporibus, brute dicunt euripidis no
-                his, et possit tincidunt liberavisse eum. Quo in dicat altera
-                officiis, ad nam consequuntur signiferumque. Id homero similique
-                has. Id posse summo maiorum eos. Nibh nostrum accommodare vim
-                ne.
-              </li>
+              <li>Species: Dog</li>
+              <li>Name: Fibi</li>
+              <li>Color: Blonde</li>
+              <li>Age: 3 Years</li>
+              <li>Notes: Energetic, loving, loyal, fast.</li>
+              <li>Next Appointment: 05/05/2025</li>
+              <li>Castrated: Yes</li>
+              <li>Medication: None</li>
+              <li><button class="btn btn-special">Edit</button></li>
             </ul>
-            <button class="btn btn-special">Edit</button>
           </li>
         </ul>
       </main>
