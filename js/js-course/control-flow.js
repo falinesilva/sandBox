@@ -98,3 +98,85 @@ console.log(photo);
 function isLandscape(width, height) {
   return width > height;
 }
+
+// FizzBuzz Exercise
+
+const output = fizzBuzz("cat");
+
+console.log(output);
+
+function fizzBuzz(input) {
+  if (typeof input != "number") return NaN;
+  else if (input % 5 === 0 && input % 3 === 0) return "FizzBuzz";
+  else if (input % 3 === 0) return "Fizz";
+  else if (input % 5 === 0) return "Buzz";
+  else return input;
+}
+
+// Demerit Points
+
+console.log(checkSpeed(20));
+
+function checkSpeed(speed) {
+  if (speed < 75) return "ok"; // TODO: Magic number
+  let points = Math.floor(speed - 70) / 5; // TODO: Magic number
+  if (points > 12) return "License suspended";
+  else return points;
+}
+
+// Even Odd Exercise
+
+showNumbers(4);
+
+function showNumbers(limit) {
+  for (let i = 0; i < limit; i++) {
+    // if (i % 2 === 0) console.log(i, "EVEN");
+    // else console.log(i, "ODD");
+
+    const message = i % 2 === 0 ? "EVEN" : "ODD";
+    console.log(i, message);
+  }
+}
+
+// Count Truthy Exercise
+
+const testArray = [null, 1, 2, 3, "hello", "hello 2"];
+
+console.log(countTruthy(testArray));
+
+function countTruthy(array) {
+  let truthies = 0;
+  for (let i = 0; i < array.length; i++) {
+    //TODO: Tighten up with for..of loop
+    if (array[i]) truthies++;
+  }
+  return truthies;
+}
+
+// String Properties Exercise
+
+const movie = {
+  title: "Not Time to Die",
+  rating: 8,
+  director: "Mr. Smith",
+  year: 2025,
+};
+
+showProperties(movie);
+
+function showProperties(object) {
+  for (let key in object)
+    if (typeof object[key] === "string") console.log(key, object[key]);
+}
+
+// Multiples Exercise
+
+console.log(sum(10));
+
+function sum(limit) {
+  let total = 0;
+  while (total < limit) total += 5;
+  while (total < limit) total += 3;
+
+  return total;
+}
