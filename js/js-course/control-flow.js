@@ -183,3 +183,41 @@ function sum(limit) {
 }
 
 console.log(sum(10));
+
+// Exercise Grade
+
+const grades = [80, 80, 50];
+
+console.log(letterGrade(grades));
+// TODO: Apply single responsibility,
+// split into separate functions for average and letter grade.
+
+function letterGrade(grades) {
+  let sum = 0;
+  for (score in grades) {
+    sum += grades[score];
+  }
+  let average = sum / grades.length;
+
+  if (average < 60) return "F";
+  else if (average < 70) return "D";
+  else if (average < 80) return "C";
+  else if (average < 90) return "B";
+  return "A";
+}
+
+// Exercise showStars
+const character = "#";
+const count = 8;
+const rows = [];
+let result = "";
+
+for (let i = 0; i < count; i = i + 1) {
+  rows.push(character.repeat(i + 1));
+}
+
+for (const row of rows) {
+  result = result + row + "\n";
+}
+
+console.log(result);
