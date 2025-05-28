@@ -171,12 +171,15 @@ function showProperties(object) {
 
 // Multiples Exercise
 
-console.log(sum(10));
-
 function sum(limit) {
-  let total = 0;
-  while (total < limit) total += 5;
-  while (total < limit) total += 3;
+  let total = 0; // Initialize total sum
 
-  return total;
+  for (let i = 1; i <= limit; i++) {
+    // Loop from 1 to limit
+    if (i % 3 === 0 || i % 5 === 0) total += i; // Add if multiple of 3 or 5
+  }
+
+  return total; // Return the final sum
 }
+
+console.log(sum(10));
