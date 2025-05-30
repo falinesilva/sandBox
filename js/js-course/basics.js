@@ -1,10 +1,15 @@
-// Exercise for learning JavaScript basics
+// Exercise for learning JavaScript basics (Yes this is a mess, will organize better later on)
 
 const interestRate = 8;
 let firstName = "Faline"; // String Literal
 let age = 30; // Number Literal
 let isApproved = false; //Boolean Literal
 let lastName = undefined;
+
+// Concatenation (pre-ES6 way)
+console.log("My name is" + firstName + "and I am" + age);
+// Template Literal/Template String
+console.log(`My name is ${firstName} and I am ${age}.`);
 
 let person = {
   //Object Literal
@@ -14,6 +19,9 @@ let person = {
 };
 
 let falineAge = person.age; // Dot Notation
+
+// Add a property
+person.email = "faline@website.com";
 
 // Bracket Notaiton
 let falineName = person["name"]; // Access the 'name' property using bracket notation
@@ -28,10 +36,53 @@ selectedColors[4] = 4; // Can store different types in arrays
 
 console.log(selectedColors.length); //Access Array properites
 
+// Arrays of Objects
+const users = [
+  { name: "Alice", age: 25 },
+  { name: "Bob", age: 30 },
+];
+
+// High-order array Methods
+
+//forEach
+const someNumbers = [1, 2, 3];
+
+someNumbers.forEach(function (num) {
+  console.log("Number is:", num);
+});
+
+//map
+const moreNumbers = [1, 2, 3];
+
+const doubled = moreNumbers.map(function (num) {
+  return num * 2;
+});
+
+console.log(doubled); // [2, 4, 6]
+
+//filter
+const otherNumbers = [1, 2, 3, 4, 5];
+
+const even = otherNumbers.filter(function (num) {
+  return num % 2 === 0;
+});
+
+console.log(even); // [2, 4]
+// Functions
 // Perform a task
 function greet(name) {
   console.log("Hello," + name); // Function statement
 }
+// Arrow Functions
+//Both do the same thing—return the sum of a and b—but the arrow function is more concise.
+
+//Without arrow function
+function add(a, b) {
+  return a + b;
+}
+
+//With arrow function
+const add = (a, b) => a + b;
 
 greet("Sarah");
 
@@ -40,7 +91,26 @@ function square(number) {
   return number * number;
 }
 
-console.log(square(2));
+// Constructor Functions & Prototypes
+
+// ES5 Prototype-based
+function Animal(name) {
+  this.name = name;
+}
+
+Animal.prototype.speak = function () {
+  console.log(this.name + " makes a noise.");
+};
+
+// ES6 Classes
+class Starship {
+  constructor(model) {
+    this.model = model;
+  }
+  launch() {
+    console.log(this.model + " is launching!");
+  }
+}
 
 // Arithmetic Operators
 
