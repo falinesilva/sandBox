@@ -207,6 +207,7 @@ function letterGrade(grades) {
 }
 
 // Exercise showStars
+// TODO: Simplify this into a concise function
 const character = "#";
 const count = 8;
 const rows = [];
@@ -221,3 +222,13 @@ for (const row of rows) {
 }
 
 console.log(result);
+
+// Show Primes Exerciser
+
+showPrimes(20);
+
+function showPrimes(limit) {
+  for (let i = 0; i < limit; i++) {
+    if (i % limit === 0) console.log(i);
+  }
+}
