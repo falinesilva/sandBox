@@ -1,173 +1,169 @@
-// JavaScript Fundamentals – Organized from Basic to Advanced
+// JavaScript Fundamentals – One Example per Topic (Ordered from Basic to Advanced)
 
 // --------------------
-// VARIABLES & DATA TYPES
+// SCRIPT TAGS (for index.html)
 // --------------------
-const interestRate = 8;
-let firstName = "Faline"; // String Literal
-let age = 30; // Number Literal
-let isApproved = false; // Boolean Literal
-let lastName = undefined;
+// <script src="script.js"></script> – placed before closing </body> tag
 
 // --------------------
-// STRINGS & TEMPLATE LITERALS
+// CONSOLE OUTPUT
 // --------------------
-console.log("My name is" + firstName + "and I am" + age); // Concatenation
-console.log(`My name is ${firstName} and I am ${age}.`); // Template Literal
+console.log("JavaScript is running!");
 
 // --------------------
-// OBJECTS
+// VARIABLES
 // --------------------
-let person = {
-  name: "Faline C.",
-  age: 31,
-};
+const pi = 3.14;
+let message = "Hello World";
+var count = 5;
 
-let falineAge = person.age; // Dot Notation
-person.email = "faline@website.com"; // Add a property
-let falineName = person["name"];
-let selection = "name";
-person[selection] = "Faline"; // Bracket Notation
+// --------------------
+// DATA TYPES
+// --------------------
+let number = 42; // Number
+let text = "Faline"; // String
+let isActive = true; // Boolean
+let nothingHere = null; // Null
+let notAssigned; // Undefined
+
+// --------------------
+// STRINGS & STRING METHODS
+// --------------------
+let sentence = "Learning JavaScript";
+console.log(sentence.includes("JavaScript"));
 
 // --------------------
 // ARRAYS
 // --------------------
-let selectedColors = ["red", "blue"];
-selectedColors[2] = "green"; // Dynamic
-selectedColors[4] = 4; // Mixed types
-console.log("Array length:", selectedColors.length);
+let fruits = ["apple", "banana", "cherry"];
+console.log(fruits.length);
 
-// Arrays of Objects
-const users = [
-  { name: "Alice", age: 25 },
-  { name: "Bob", age: 30 },
+// --------------------
+// OBJECT LITERALS
+// --------------------
+let profile = {
+  username: "faline123",
+  age: 31,
+  isVerified: false,
+};
+console.log(profile.username);
+
+// --------------------
+// ARRAYS OF OBJECTS & JSON
+// --------------------
+let users = [
+  { id: 1, name: "Alice" },
+  { id: 2, name: "Bob" },
 ];
+console.log(JSON.stringify(users));
 
 // --------------------
-// FUNCTIONS
+// LOOPS
 // --------------------
-function greet(name) {
-  console.log("Hello," + name);
+for (let i = 1; i <= 3; i++) {
+  console.log("Number:", i);
 }
-
-greet("Sarah");
-
-function square(number) {
-  return number * number;
-}
-
-// Arrow Functions
-function add(a, b) {
-  return a + b;
-}
-
-const addArrow = (a, b) => a + b;
 
 // --------------------
 // HIGHER-ORDER ARRAY METHODS
 // --------------------
-const someNumbers = [1, 2, 3];
-someNumbers.forEach(function (num) {
-  console.log("forEach value:", num);
-});
-
-const moreNumbers = [1, 2, 3];
-const doubled = moreNumbers.map(function (num) {
-  return num * 2;
-});
-console.log("Doubled values:", doubled); // [2, 4, 6]
-
-const otherNumbers = [1, 2, 3, 4, 5];
-const even = otherNumbers.filter(function (num) {
-  return num % 2 === 0;
-});
-console.log("Even numbers:", even); // [2, 4]
+let nums = [1, 2, 3, 4];
+let evens = nums.filter((n) => n % 2 === 0);
+console.log(evens);
 
 // --------------------
-// OPERATORS
+// CONDITIONALS
 // --------------------
-let x = 10;
-let y = 3;
+let temp = 72;
+if (temp > 80) {
+  console.log("Too hot");
+} else if (temp < 60) {
+  console.log("Too cold");
+} else {
+  console.log("Just right");
+}
 
-// Arithmetic Operators
-console.log("Addition:", x + y);
-console.log("Subtraction:", x - y);
-console.log("Multiplication:", x * y);
-console.log("Division:", x / y);
-console.log("Remainder:", x % y);
-console.log("Exponentiation:", x ** y);
+// --------------------
+// FUNCTIONS
+// --------------------
+function greetUser(user) {
+  return `Hello, ${user}!`;
+}
+console.log(greetUser("Faline"));
 
-// Increment & Decrement
-console.log("Pre-increment:", ++x);
-console.log("Post-increment:", x++);
-console.log("Pre-decrement:", --x);
-console.log("Post-decrement:", x--);
-
-// Assignment Operators
-x++;
-x = x + 1;
-x += 5;
-x *= 3;
-
-// Comparison Operators
-console.log("x > 0:", x > 0);
-console.log("x >= 1:", x >= 1);
-console.log("x < 1:", x < 1);
-console.log("x <= 1:", x <= 1);
-console.log("x === 0:", x === 0);
-console.log("x !== 0:", x !== 0);
-console.log("x === 0 again:", x === 0);
-console.log("x == 0:", x == 0);
-
-// Ternary Operator
-let points = 110;
-let type = points > 100 ? "gold" : "silver";
-console.log("Membership type:", type);
-
-// Logical Operators
-let highIncome = true;
-let goodCreditScore = true;
-let eligibleForLoan = highIncome && goodCreditScore;
-console.log("Eligible for loan:", eligibleForLoan);
-
-let happy = false;
-let sad = false;
-let yourMood = happy || sad;
-console.log("Your mood:", yourMood);
-
-let applicationRefused = !eligibleForLoan;
-console.log("Application refused:", applicationRefused);
-
-// Logical Operators with Non-Boolean Values
-console.log("0 || 'hello':", 0 || "hello");
-console.log("'hi' && 5:", "hi" && 5);
-console.log("null || undefined:", null || undefined);
-console.log("'' && 'text':", "" && "text");
-console.log("null || 1 || 2:", null || 1 || 2);
-console.log("'' || null || 2:", "" || null || 2);
-
-let userColor = "red";
-let defaultColor = "blue";
-let currentColor = userColor || defaultColor;
-console.log("Current color:", currentColor);
+// --------------------
+// ARROW FUNCTIONS
+// --------------------
+const divide = (x, y) => x / y;
+console.log(divide(10, 2));
 
 // --------------------
 // CONSTRUCTOR FUNCTIONS & PROTOTYPES
 // --------------------
-function Animal(name) {
+function Pet(name) {
   this.name = name;
 }
-
-Animal.prototype.speak = function () {
-  console.log(this.name + " makes a noise.");
+Pet.prototype.talk = function () {
+  console.log(`${this.name} says hello!`);
 };
+let cat = new Pet("Whiskers");
+cat.talk();
 
-// ES6 Class
-class Starship {
-  constructor(model) {
-    this.model = model;
+// --------------------
+// ES6 CLASSES
+// --------------------
+class Appliance {
+  constructor(type) {
+    this.type = type;
   }
-  launch() {
-    console.log(this.model + " is launching!");
+  start() {
+    console.log(`${this.type} is starting.`);
   }
 }
+let blender = new Appliance("Blender");
+blender.start();
+
+// --------------------
+// WINDOW OBJECT & DOM
+// --------------------
+console.log("Window height:", window.innerHeight);
+document.title = "JavaScript Practice";
+
+// --------------------
+// MANIPULATING THE DOM
+// --------------------
+// Single element selector (only selects the first one)
+
+console.log(document.getElementById("my-form"));
+console.log(document.querySelector("h1"));
+
+// Multiple element selector
+console.log(document.querySelectorAll(".item"));
+// Gives a node list similar to an array
+
+// Create and add new element to the page
+let paragraph = document.createElement("p");
+paragraph.textContent = "This is added with JavaScript.";
+document.body.appendChild(paragraph);
+
+// --------------------
+// EVENTS
+// --------------------
+paragraph.addEventListener("mouseover", () => {
+  console.log("You hovered over the paragraph!");
+});
+
+// --------------------
+// FORM SCRIPT
+// --------------------
+document.body.innerHTML += `
+  <form id="signup">
+    <input type="email" name="email" placeholder="Enter your email">
+    <button type="submit">Sign Up</button>
+  </form>
+`;
+
+document.querySelector("#signup").addEventListener("submit", function (e) {
+  e.preventDefault();
+  console.log("Signup form submitted");
+});
