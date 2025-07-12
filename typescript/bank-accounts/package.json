@@ -1,5 +1,5 @@
 {
-  "name": "typescript",
+  "name": "bank-accounts",
   "version": "1.0.0",
   "description": "",
   "license": "ISC",
@@ -7,7 +7,7 @@
   "type": "commonjs",
   "main": "index.js",
   "scripts": {
-    "start": "tsc ./src/index.ts --watch",
+    "start": "node --watch src/index.ts",
     "test": "echo \"Error: no test specified\" && exit 1"
   }
 }
