@@ -1,0 +1,22 @@
+[
+  {
+    "company": "Electric Company",
+    "due_date": "2025-08-01"
+  },
+  {
+    "company": "Water Utility",
+    "due_date": "2025-08-05"
+  },
+  {
+    "company": "Internet Provider",
+    "due_date": "2025-08-10"
+  },
+  {
+    "company": "Credit Card",
+    "due_date": "2025-08-15"
+  },
+  {
+    "company": "Rent",
+    "due_date": "2025-08-01"
+  }
+]

@@ -3,19 +3,155 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Hello, jQuery!</title>
+    <title>Finances Check Up</title>
     <script src="jquery-3.7.1.min.js"></script>
-    <script>
-      $("document").ready(function () {
-        $("button").click(function () {
-          $("p").toggle();
-        });
-      });
-    </script>
+    <style>
+      body {
+        font-size: 17px;
+        font-family: Arial, Helvetica, sans-serif;
+        color: white;
+        background-color: #333;
+      }
+
+      h1 {
+        color: white;
+        text-align: center;
+      }
+
+      #container {
+        width: 90%;
+        margin: auto;
+        padding: 10px;
+      }
+    </style>
   </head>
   <body>
-    <h1>This is a header.</h1>
-    <p>This is a paragraph.</p>
-    <button>Click here</button>
+    <div id="result"></div>
+
+    <div id="container">
+      <h1>Finances Check Up</h1>
+      <h2>Answer these questions:</h2>
+      <form id="form">
+        <ol>
+          <li>
+            How much cash do you have available right now?
+            <input id="cash" type="number" placeholder="$0" />
+          </li>
+
+          <li>
+            Do you have food and water?
+            <label>
+              <input type="radio" name="foodWater" value="yes" /> Yes
+            </label>
+            <label>
+              <input type="radio" name="foodWater" value="no" /> No
+            </label>
+          </li>
+
+          <li>
+            Are you late on your rent/mortgage payment?
+            <label>
+              <input type="radio" name="rentMortgage" value="yes" /> Yes
+            </label>
+            <label>
+              <input type="radio" name="rentMortgage" value="no" /> No
+            </label>
+            <input
+              type="number"
+              id="pastDueRentMortgage"
+              placeholder="Enter past due amount"
+              style="display: none"
+            />
+          </li>
+
+          <li>
+            Are you late on your electric bill?
+            <label>
+              <input type="radio" name="choice" value="option1" /> Yes
+            </label>
+            <label>
+              <input type="radio" name="choice" value="option2" /> No
+            </label>
+          </li>
+        </ol>
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+    <div>
+      <h1>My Bills</h1>
+      <ul id="billsList"></ul>
+    </div>
+    <div>
+      <h1>Ajax POST Test</h1>
+      <form id="postForm" action="https://jsonplaceholder.typicode.com/posts">
+        <input type="text" id="title" placeholder="Title" /><br />
+        <textarea placeholder="Body" id="body"></textarea><br />
+        <button type="submit" value="Submit">Submit</button>
+      </form>
+    </div>
+
+    <div>
+      <h1>Ajax GET Test</h1>
+      <ul id="ajaxGETtest"></ul>
+    </div>
+
+    <script>
+      $(document).ready(function () {
+        // $("#result").load(
+        //   "ajaxTest.html",
+        //   function (responseTxt, statusTxt, xhr) {
+        //     if (statusTxt === "success") {
+        //       console.log("statusTxt worked");
+        //     } else if (statusTxt == "error") {
+        //       console.log("statusTxt Error:" + xhr.statusTxt);
+        //     }
+        //   }
+        // );
+        $.getJSON("bills.json", function (data) {
+          $.each(data, function (i, bill) {
+            $("ul#billsList").append("<li>" + bill.company + "</li>");
+          });
+        });
+
+        $("#postForm").submit(function (e) {
+          e.preventDefault();
+          var title = $("#title").val();
+          var body = $("#body").val();
+          var url = $(this).attr("action");
+
+          $.post(url, { title: title, body: body }).done(function (data) {
+            console.log("Post Saved");
+            console.log(data);
+          });
+        });
+
+        $.ajax({
+          method: "GET",
+          url: "https://jsonplaceholder.typicode.com/posts",
+          dataType: "json",
+        }).done(function (data) {
+          $.map(data, function (post, i) {
+            $("#ajaxGETtest").append(
+              "<h3>" + post.title + "</h3><p>" + post.body + "</p>"
+            );
+          });
+        });
+      });
+
+      $("input[name='rentMortgage']").change(function () {
+        if ($(this).val() === "yes") {
+          $("#pastDueRentMortgage").show();
+        } else {
+          $("#pastDueRentMortgage").hide();
+        }
+      });
+
+      $("#form").submit(function (e) {
+        e.preventDefault();
+        var cash = $("input#cash").val();
+        console.log("$" + cash);
+        console.log("Submitted");
+      });
+    </script>
   </body>
 </html>
